@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Orange Dashboard - Sneat Style</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+
+    <aside id="sidebar">
+        <div class="brand-logo text-uppercase">
+            <div class="logo-icon shadow-sm">
+                <i class="bi bi-snow"></i>
+            </div>
+            <span>AC-Smart</span>
+        </div>
+
+        <div class="mt-2 overflow-auto" style="max-height: calc(100vh - 100px);">
+            <small class="text-muted fw-bold px-4 mb-2 d-block" style="font-size: 0.7rem;">MENU UTAMA</small>
+
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a href="#" class="nav-link active">
+                        <i class="bi bi-grid-1x2-fill"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link menu-toggle" data-bs-toggle="collapse" href="#energyMenu" role="button">
+                        <i class="bi bi-lightning-charge"></i>
+                        <span>Energi</span>
+                        <i class="bi bi-chevron-right ms-auto arrow-icon"></i>
+                    </a>
+                    <div class="collapse" id="energyMenu">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item"><a class="nav-link" href="#">Kalkulator PK</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Estimasi Token</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link menu-toggle" data-bs-toggle="collapse" href="#serviceMenu" role="button">
+                        <i class="bi bi-calendar-check"></i>
+                        <span>Jadwal Servis</span>
+                        <i class="bi bi-chevron-right ms-auto arrow-icon"></i>
+                    </a>
+                    <div class="collapse" id="serviceMenu">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item"><a class="nav-link" href="#">Riwayat Cuci</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Booking Teknisi</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+
+            <small class="text-muted fw-bold px-4 mt-4 mb-2 d-block" style="font-size: 0.7rem;">LAPORAN</small>
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a href="#" class="nav-link"><i class="bi bi-file-earmark-bar-graph"></i> Riwayat Biaya</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link"><i class="bi bi-gear"></i> Pengaturan</a>
+                </li>
+            </ul>
+        </div>
+    </aside>
+
+    <main id="content">
+        <nav class="navbar navbar-expand navbar-floating">
+            <div class="container-fluid px-0">
+                <button class="btn btn-link d-lg-none me-2" id="sidebarToggle">
+                    <i class="bi bi-list fs-3 text-dark"></i>
+                </button>
+
+                <div class="search-box d-none d-md-flex">
+                    <i class="bi bi-search text-muted me-2"></i>
+                    <input type="text" class="border-0 bg-transparent" placeholder="Cari data..."
+                        style="outline: none;">
+                </div>
+
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item me-3">
+                        <i class="bi bi-bell fs-5 text-muted"></i>
+                        </a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle p-0 d-flex align-items-center" href="#"
+                            data-bs-toggle="dropdown">
+                            <img src="https://ui-avatars.com/api/?name=Admin+User&background=ff3e1d&color=fff"
+                                class="rounded-circle" width="38">
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+                            <li><a class="dropdown-item" href="#">My Profile</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item text-danger" href="#">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="container-fluid px-0">
+            <!-- Row Basic Dashboard -->
+            <div class="row">
+                <div class="col-lg-12 mb-4">
+                    <div class="card card-custom p-4 bg-white">
+                        <div class="row align-items-center">
+                            <div class="col-md-8">
+                                <h4 class="text-primary-orange fw-bold" style="color: var(--primary-orange);">Selamat
+                                    Datang, Admin! 🎉</h4>
+                                <p class="text-muted mb-0">Estimasi penggunaan AC Anda bulan ini sangat efisien.
+                                    Pertahankan suhu di 24°C untuk penghematan maksimal.</p>
+                            </div>
+                            <div class="col-md-4 text-end d-none d-md-block">
+                                <i class="bi bi-pie-chart-fill"
+                                    style="font-size: 4rem; color: #ffab00; opacity: 0.2;"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="card card-custom p-3 bg-white">
+                        <div class="d-flex align-items-center">
+                            <div class="icon-box bg-label-orange me-3">
+                                <i class="bi bi-wallet2 fs-5"></i>
+                            </div>
+                            <div>
+                                <small class="text-muted d-block">Biaya Berjalan</small>
+                                <span class="fw-bold fs-5">Rp171.350</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="card card-custom p-3 bg-white">
+                        <div class="d-flex align-items-center">
+                            <div class="icon-box bg-light-info me-3" style="background: #e7e7ff; color: #696cff;">
+                                <i class="bi bi-clock-history fs-5"></i>
+                            </div>
+                            <div>
+                                <small class="text-muted d-block">Total Jam Aktif</small>
+                                <span class="fw-bold fs-5">240 Jam</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="card card-custom p-3 bg-white text-white"
+                        style="background: linear-gradient(135deg, #ff8c00, #ff3e1d);">
+                        <div class="d-flex align-items-center">
+                            <div class="icon-box bg-white bg-opacity-25 me-3">
+                                <i class="bi bi-tools fs-5"></i>
+                            </div>
+                            <div>
+                                <small class="text-white-50 d-block">Jadwal Cuci AC</small>
+                                <span class="fw-bold fs-5">12 Jan 2026</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Row Table -->
+            <div class="row mt-4">
+                <div class="col-12">
+                    <div class="card card-custom bg-white border-0 shadow-sm">
+                        <div
+                            class="card-header bg-transparent border-0 pt-4 px-4 d-flex justify-content-between align-items-center">
+                            <h5 class="fw-bold text-dark m-0">Riwayat Maintenance AC</h5>
+                            <button class="btn btn-sm btn-label-orange">
+                                <i class="bi bi-plus-lg me-1"></i> Tambah Data
+                            </button>
+                        </div>
+                        <div class="table-responsive text-nowrap p-2">
+                            <table class="table table-hover">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th class="border-0 text-muted small text-uppercase">Tanggal</th>
+                                        <th class="border-0 text-muted small text-uppercase">Jenis Layanan</th>
+                                        <th class="border-0 text-muted small text-uppercase">Teknisi</th>
+                                        <th class="border-0 text-muted small text-uppercase">Biaya</th>
+                                        <th class="border-0 text-muted small text-uppercase">Status</th>
+                                        <th class="border-0 text-muted small text-uppercase text-center">Aksi</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="table-border-bottom-0">
+                                    <tr>
+                                        <td><strong>15 Okt 2025</strong></td>
+                                        <td>Cuci AC Rutin</td>
+                                        <td>Bpk. Sugeng</td>
+                                        <td>Rp75.000</td>
+                                        <td><span class="badge bg-label-success">Selesai</span></td>
+                                        <td class="text-center">
+                                            <div class="dropdown">
+                                                <button type="button" class="btn p-0 dropdown-toggle hide-arrow"
+                                                    data-bs-toggle="dropdown">
+                                                    <i class="bi bi-three-dots-vertical"></i>
+                                                </button>
+                                                <ul class="dropdown-menu dropdown-menu-end">
+                                                    <li><a class="dropdown-item" href="#"><i
+                                                                class="bi bi-pencil-square me-2"></i> Edit</a></li>
+                                                    <li><a class="dropdown-item text-danger" href="#"><i
+                                                                class="bi bi-trash me-2"></i> Hapus</a></li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>12 Jan 2026</strong></td>
+                                        <td>Isi Freon & Cuci</td>
+                                        <td>Toko Sejuk Abadi</td>
+                                        <td>Rp250.000</td>
+                                        <td><span class="badge bg-label-warning">Terjadwal</span></td>
+                                        <td class="text-center">
+                                            <button class="btn btn-sm btn-icon">
+                                                <i class="bi bi-three-dots-vertical"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Row Card -->
+            <div class="row mt-4">
+                <div class="col-md-4 col-lg-3 mb-4">
+                    <div class="card card-product border-0 shadow-sm h-100">
+                        <div class="product-img-wrapper position-relative">
+                            <div class="product-badge">
+                                <span class="badge bg-label-orange">Hemat Energi</span>
+                            </div>
+                            <div class="img-container">
+                                <img src="https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?auto=format&fit=crop&q=80&w=400"
+                                    alt="AC Unit">
+                            </div>
+                        </div>
+
+                        <div class="card-body p-3">
+                            <div class="d-flex justify-content-between mb-1">
+                                <small class="text-muted">Inverter</small>
+                                <small class="text-warning"><i class="bi bi-star-fill"></i> 4.8</small>
+                            </div>
+                            <h6 class="fw-bold mb-2 text-dark">Daikin Inverter 1/2 PK</h6>
+                            <div class="product-price mb-3">
+                                <span class="text-primary-orange fw-bold fs-5">Rp4.250.000</span>
+                                <small class="text-muted text-decoration-line-through ms-1">Rp4.8k</small>
+                            </div>
+                            <button class="btn btn-primary-orange w-100 py-2">
+                                <i class="bi bi-cart-plus me-1"></i> Tambahkan
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Row Modal -->
+            <div class="row mt-4">
+                <div class="col-12 text-center">
+                    <button type="button" class="btn btn-primary-orange shadow-sm px-4" data-bs-toggle="modal"
+                        data-bs-target="#modalTambahProduk">
+                        <i class="bi bi-plus-circle me-2"></i> Launch Demo Modal
+                    </button>
+                    <button type="button" class="btn btn-primary-orange shadow-sm px-4" data-bs-toggle="modal"
+                        data-bs-target="#searchModal">
+                        <i class="bi bi-plus-circle me-2"></i> Launch Demo Modal
+                    </button>
+                </div>
+
+                <div class="modal fade" id="modalTambahProduk" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content border-0 shadow-lg">
+                            <div class="modal-header border-0 pb-0">
+                                <h5 class="modal-title fw-bold text-dark">Tambah Unit AC Baru</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+
+                            <div class="modal-body">
+                                <form id="formProduk">
+                                    <div class="mb-3">
+                                        <label class="form-label fw-semibold small text-muted">Nama Produk</label>
+                                        <input type="text" class="form-control custom-input"
+                                            placeholder="Contoh: Panasonic Nanoe-G 1 PK">
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label class="form-label fw-semibold small text-muted">Kategori</label>
+                                            <select class="form-select custom-input">
+                                                <option selected>Inverter</option>
+                                                <option>Non-Inverter</option>
+                                                <option>Portable</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label class="form-label fw-semibold small text-muted">Harga (Rp)</label>
+                                            <input type="number" class="form-control custom-input" placeholder="0">
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label class="form-label fw-semibold small text-muted">Upload Gambar</label>
+                                        <input type="file" class="form-control custom-input">
+                                    </div>
+
+                                    <div class="mb-0">
+                                        <label class="form-label fw-semibold small text-muted">Deskripsi Singkat</label>
+                                        <textarea class="form-control custom-input" rows="3"
+                                            placeholder="Jelaskan fitur utama..."></textarea>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <div class="modal-footer border-0 pt-0">
+                                <button type="button" class="btn btn-outline-secondary px-4"
+                                    data-bs-dismiss="modal">Batal</button>
+                                <button type="submit" form="formProduk" class="btn btn-primary-orange px-4">Simpan
+                                    Produk</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="modal fade" id="searchModal" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog modal-lg" role="document">
+                        <div class="modal-content shadow-lg border-0">
+                            <div class="modal-header border-bottom p-3">
+                                <div class="input-group input-group-merge">
+                                    <span class="input-group-text border-0 ps-0" id="basic-addon-search31">
+                                        <i class="bi bi-search fs-4 text-primary-orange"></i>
+                                    </span>
+                                    <input type="text" class="form-control border-0 shadow-none fs-5"
+                                        placeholder="Cari barang, fitur, atau halaman..." aria-label="Search..."
+                                        aria-describedby="basic-addon-search31" autofocus>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                            </div>
+                            <div class="modal-body p-4" style="max-height: 450px; overflow-y: auto;">
+                                <div class="mb-4">
+                                    <h6 class="text-muted small fw-bold text-uppercase mb-3">Halaman Populer</h6>
+                                    <div class="row g-2">
+                                        <div class="col-md-6">
+                                            <a href="#"
+                                                class="search-result-item d-flex align-items-center p-2 rounded text-decoration-none">
+                                                <div class="bg-label-orange p-2 rounded me-3">
+                                                    <i class="bi bi-house-door text-primary-orange"></i>
+                                                </div>
+                                                <span class="text-dark">Dashboard Utama</span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <a href="#"
+                                                class="search-result-item d-flex align-items-center p-2 rounded text-decoration-none">
+                                                <div class="bg-light p-2 rounded me-3 text-secondary">
+                                                    <i class="bi bi-gear"></i>
+                                                </div>
+                                                <span class="text-dark">Pengaturan Akun</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <h6 class="text-muted small fw-bold text-uppercase mb-3">Produk Terbaru</h6>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item border-0 px-0 mb-2">
+                                            <a href="#"
+                                                class="d-flex justify-content-between align-items-center text-decoration-none">
+                                                <div class="d-flex align-items-center">
+                                                    <img src="https://via.placeholder.com/40" class="rounded me-3"
+                                                        alt="AC">
+                                                    <div>
+                                                        <h6 class="mb-0 text-dark">Daikin Inverter 1 PK</h6>
+                                                        <small class="text-muted">Kategori: AC Split</small>
+                                                    </div>
+                                                </div>
+                                                <span class="badge bg-label-orange text-primary-orange">Rp 5.4jt</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="modal-footer bg-light p-2 d-flex justify-content-start">
+                                <small class="text-muted ms-2">
+                                    <span class="badge bg-white text-dark border shadow-sm me-1">ESC</span> untuk keluar
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Row Paginatin and Breadcrumb -->
+            <div class="row">
+                <div class="col-12">
+                    <nav aria-label="breadcrumb" class="d-flex align-items-center mb-4">
+                        <ol class="breadcrumb m-0">
+                            <li class="breadcrumb-item">
+                                <a href="#" class="text-decoration-none d-flex align-items-center"
+                                    style="color: var(--primary-orange);">
+                                    <i class="bi bi-house-door-fill me-2 fs-5"></i>
+                                    <span class="fw-medium">Dashboard</span>
+                                </a>
+                            </li>
+                            <li class="breadcrumb-item active d-flex align-items-center" aria-current="page">
+                                <span class="text-muted ms-1">Riwayat Maintenance</span>
+                            </li>
+                        </ol>
+                    </nav>
+                    <div class="card-footer bg-transparent border-0 pb-4">
+                        <nav aria-label="Page navigation">
+                            <ul class="pagination justify-content-center mb-0">
+                                <li class="page-item disabled">
+                                    <a class="page-link shadow-none" href="#" tabindex="-1">
+                                        <i class="bi bi-chevron-left"></i>
+                                    </a>
+                                </li>
+                                <li class="page-item active"><a class="page-link shadow-none" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link shadow-none" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link shadow-none" href="#">3</a></li>
+                                <li class="page-item">
+                                    <a class="page-link shadow-none" href="#" style="color: var(--primary-orange);">
+                                        <i class="bi bi-chevron-right"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <!-- Row Login Form -->
+            <div class="auth-wrapper d-flex align-items-center justify-content-center"
+                style="min-height: 100vh; background-color: #f5f5f9;">
+                <div class="auth-inner card p-4 shadow-sm"
+                    style="max-width: 400px; width: 100%; border-radius: 0.75rem;">
+
+                    <div class="text-center mb-4">
+                        <div class="d-inline-flex align-items-center justify-content-center bg-label-orange rounded-3 mb-2"
+                            style="width: 50px; height: 50px;">
+                            <i class="bi bi-snow fs-3 text-primary-orange"></i>
+                        </div>
+                        <h4 class="fw-bold text-dark mb-1">AC-Smart</h4>
+                        <p class="text-muted small">Kelola AC Anda dengan lebih cerdas</p>
+                    </div>
+
+                    <div id="loginForm">
+                        <h5 class="mb-3 fw-bold">Login</h5>
+                        <form>
+                            <div class="mb-3">
+                                <label class="form-label small fw-semibold text-muted">Email atau Username</label>
+                                <input type="text" class="form-control custom-input" placeholder="Masukkan email Anda">
+                            </div>
+                            <div class="mb-3">
+                                <div class="d-flex justify-content-between">
+                                    <label class="form-label small fw-semibold text-muted">Password</label>
+                                    <a href="javascript:void(0);" onclick="showForm('forgotForm')"
+                                        class="small text-decoration-none text-primary-orange">Lupa Password?</a>
+                                </div>
+                                <input type="password" class="form-control custom-input" placeholder="············">
+                            </div>
+                            <div class="mb-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="remember-me">
+                                    <label class="form-check-label small" for="remember-me">Ingat Saya</label>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary-orange w-100 py-2 mb-3">Masuk</button>
+                        </form>
+                        <p class="text-center small">
+                            Belum punya akun? <a href="javascript:void(0);" onclick="showForm('registerForm')"
+                                class="text-decoration-none text-primary-orange fw-semibold">Buat Akun</a>
+                        </p>
+                    </div>
+
+                    <div id="registerForm" style="display: none;">
+                        <h5 class="mb-3 fw-bold">Daftar Akun</h5>
+                        <form>
+                            <div class="mb-3">
+                                <label class="form-label small fw-semibold text-muted">Nama Lengkap</label>
+                                <input type="text" class="form-control custom-input" placeholder="John Doe">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label small fw-semibold text-muted">Email</label>
+                                <input type="email" class="form-control custom-input" placeholder="john@example.com">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label small fw-semibold text-muted">Password</label>
+                                <input type="password" class="form-control custom-input" placeholder="············">
+                            </div>
+                            <button class="btn btn-primary-orange w-100 py-2 mb-3">Daftar Sekarang</button>
+                        </form>
+                        <p class="text-center small">
+                            Sudah punya akun? <a href="javascript:void(0);" onclick="showForm('loginForm')"
+                                class="text-decoration-none text-primary-orange fw-semibold">Login kembali</a>
+                        </p>
+                    </div>
+
+                    <div id="forgotForm" style="display: none;">
+                        <h5 class="mb-2 fw-bold">Lupa Password? 🔒</h5>
+                        <p class="text-muted small mb-4">Masukkan email Anda dan kami akan mengirimkan instruksi reset.
+                        </p>
+                        <form>
+                            <div class="mb-3">
+                                <label class="form-label small fw-semibold text-muted">Email</label>
+                                <input type="email" class="form-control custom-input"
+                                    placeholder="Masukkan email terdaftar">
+                            </div>
+                            <button class="btn btn-primary-orange w-100 py-2 mb-3">Kirim Link Reset</button>
+                        </form>
+                        <div class="text-center">
+                            <a href="javascript:void(0);" onclick="showForm('loginForm')"
+                                class="small text-decoration-none text-primary-orange">
+                                <i class="bi bi-chevron-left"></i> Kembali ke Login
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- Row WYSIMYG -->
+            <div class="row">
+                <div class="container-xxl flex-grow-1 container-p-y">
+                    <div class="mb-3">
+                        <label class="form-label fw-bold small text-muted text-uppercase">Deskripsi Laporan / Catatan
+                            Teknisi</label>
+                        <div id="editor-container">
+                            <div id="editor">
+                                <p>Tulis detail pengecekan AC di sini...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Row Detail Product -->
+            <div class="row">
+                <div class="container-xxl flex-grow-1 container-p-y">
+                    <nav aria-label="breadcrumb" class="mb-4">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#"
+                                    class="text-decoration-none text-primary-orange">Dashboard</a></li>
+                            <li class="breadcrumb-item"><a href="#"
+                                    class="text-decoration-none text-primary-orange">Produk</a></li>
+                            <li class="breadcrumb-item active">Daikin Inverter STKC25NV</li>
+                        </ol>
+                    </nav>
+
+                    <div class="row">
+                        <div class="col-lg-5 mb-4">
+                            <div class="card border-0 shadow-sm p-2">
+                                <div class="product-image-main rounded overflow-hidden mb-2">
+                                    <img src="https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?auto=format&fit=crop&q=80&w=800"
+                                        class="img-fluid w-100" alt="Main Product">
+                                </div>
+                                <div class="product-thumbnails d-flex gap-2">
+                                    <img src="https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?auto=format&fit=crop&q=80&w=150"
+                                        class="img-thumbnail border-orange" width="80">
+                                    <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&q=80&w=150"
+                                        class="img-thumbnail" width="80">
+                                    <img src="https://images.unsplash.com/photo-1590477949916-b5e19d2b486c?auto=format&fit=crop&q=80&w=150"
+                                        class="img-thumbnail" width="80">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-7">
+                            <div class="card border-0 shadow-sm p-4">
+                                <span class="badge bg-label-orange mb-2" style="width: fit-content;">Best Seller</span>
+                                <h3 class="fw-bold mb-1">Daikin Inverter 1 PK - Star Series</h3>
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="text-warning me-2">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-half"></i>
+                                    </div>
+                                    <span class="text-muted small">(150+ Ulasan Pelanggan)</span>
+                                </div>
+
+                                <h2 class="text-primary-orange fw-bold mb-4">Rp 5.450.000</h2>
+
+                                <p class="text-muted mb-4">
+                                    Nikmati pendinginan cepat dan hemat energi hingga 50% dengan teknologi Inverter
+                                    terbaru.
+                                    Dilengkapi dengan filter Titanium Apatite Photocatalytic untuk udara lebih bersih
+                                    dan
+                                    sehat.
+                                </p>
+
+                                <div class="mb-4">
+                                    <h6 class="fw-bold small text-muted text-uppercase mb-2">Pilih Kapasitas (PK)</h6>
+                                    <div class="d-flex gap-2">
+                                        <button class="btn btn-outline-orange active">1/2 PK</button>
+                                        <button class="btn btn-outline-orange">1 PK</button>
+                                        <button class="btn btn-outline-orange">1.5 PK</button>
+                                        <button class="btn btn-outline-orange">2 PK</button>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex gap-3 mb-5">
+                                    <div class="input-group" style="width: 130px;">
+                                        <button class="btn btn-outline-secondary border-light-subtle">-</button>
+                                        <input type="text" class="form-control text-center border-light-subtle"
+                                            value="1">
+                                        <button class="btn btn-outline-secondary border-light-subtle">+</button>
+                                    </div>
+                                    <button class="btn btn-primary-orange flex-grow-1 py-2">
+                                        <i class="bi bi-cart-plus me-2"></i> Tambah ke Keranjang
+                                    </button>
+                                </div>
+
+                                <hr>
+
+                                <div class="row mt-3">
+                                    <div class="col-6 mb-2">
+                                        <small class="text-muted d-block">Garansi Resmi</small>
+                                        <span class="fw-semibold">3 Tahun Kompresor</span>
+                                    </div>
+                                    <div class="col-6 mb-2">
+                                        <small class="text-muted d-block">Pengiriman</small>
+                                        <span class="fw-semibold">Tersedia via Kurir Toko</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-4">
+                        <div class="col-12">
+                            <div class="card border-0 shadow-sm">
+                                <div class="card-header bg-transparent border-0">
+                                    <ul class="nav nav-tabs card-header-tabs" id="productTab" role="tablist">
+                                        <li class="nav-item">
+                                            <button class="nav-link m-1 active" data-bs-toggle="tab"
+                                                data-bs-target="#desc">Deskripsi</button>
+                                        </li>
+                                        <li class="nav-item">
+                                            <button class="nav-link m-1" data-bs-toggle="tab"
+                                                data-bs-target="#spec">Spesifikasi
+                                                Teknis</button>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="card-body tab-content p-4">
+                                    <div class="tab-pane fade show active" id="desc">
+                                        <h6>Keunggulan Utama:</h6>
+                                        <ul>
+                                            <li>Smart Wi-Fi Control (Opsional)</li>
+                                            <li>Operasi Senyap (Quiet Mode)</li>
+                                            <li>Econo Mode untuk penghematan listrik maksimal</li>
+                                        </ul>
+                                    </div>
+                                    <div class="tab-pane fade" id="spec">
+                                        <table class="table table-striped table-sm">
+                                            <tr>
+                                                <td width="30%">Model</td>
+                                                <td>STKC25NV</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Kapasitas Pendinginan</td>
+                                                <td>8,500 BTU/h</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Daya Listrik</td>
+                                                <td>540 Watt (Low Mode)</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Dimensi Indoor</td>
+                                                <td>285 x 770 x 223 mm</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Row Kategori Product -->
+            <div class="row">
+                <div class="container-xxl flex-grow-1 container-p-y">
+                    <div class="col-3">
+                        <div class="card border-0 shadow-sm mb-4">
+                            <div class="card-body">
+                                <div class="mb-4">
+                                    <h6 class="fw-bold mb-3">Cari Produk</h6>
+                                    <div class="input-group input-group-merge border rounded-3">
+                                        <span class="input-group-text border-0 bg-transparent"><i
+                                                class="bi bi-search text-muted"></i></span>
+                                        <input type="text" class="form-control border-0 shadow-none ps-0"
+                                            placeholder="Ketik nama AC...">
+                                    </div>
+                                </div>
+
+                                <hr class="my-4 text-light">
+
+                                <div class="mb-4">
+                                    <h6 class="fw-bold mb-3">Kategori Produk</h6>
+                                    <ul class="nav flex-column gap-1">
+                                        <li class="nav-item">
+                                            <a href="#"
+                                                class="nav-link category-link active d-flex justify-content-between align-items-center">
+                                                <span><i class="bi bi-wind me-2"></i> AC Split</span>
+                                                <span class="badge rounded-pill bg-label-orange">24</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#"
+                                                class="nav-link category-link d-flex justify-content-between align-items-center">
+                                                <span><i class="bi bi-box me-2"></i> AC Cassette</span>
+                                                <span class="badge rounded-pill bg-light text-muted">12</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#"
+                                                class="nav-link category-link d-flex justify-content-between align-items-center">
+                                                <span><i class="bi bi-pci-card me-2"></i> AC Standing</span>
+                                                <span class="badge rounded-pill bg-light text-muted">8</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <hr class="my-4 text-light">
+
+                                <div class="mb-2">
+                                    <h6 class="fw-bold mb-3">Brand Favorit</h6>
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input shadow-none" type="checkbox" id="brandDaikin"
+                                            checked>
+                                        <label class="form-check-label d-flex justify-content-between w-100"
+                                            for="brandDaikin">
+                                            Daikin <small class="text-muted">(15)</small>
+                                        </label>
+                                    </div>
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input shadow-none" type="checkbox" id="brandPanasonic">
+                                        <label class="form-check-label d-flex justify-content-between w-100"
+                                            for="brandPanasonic">
+                                            Panasonic <small class="text-muted">(10)</small>
+                                        </label>
+                                    </div>
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input shadow-none" type="checkbox" id="brandSharp">
+                                        <label class="form-check-label d-flex justify-content-between w-100"
+                                            for="brandSharp">
+                                            Sharp <small class="text-muted">(7)</small>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.ckeditor.com/ckeditor5/40.0.0/classic/ckeditor.js"></script>
+    <script src="../assets/js/script.js"></script>
+</body>
+
+</html>
