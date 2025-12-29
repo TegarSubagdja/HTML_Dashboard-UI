@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- 2. Logika CKEditor ---
     const initEditor = () => {
-        const editorElement = document.querySelector('#editor');
+        const editorElement = document.querySelectorAll('.editor');
 
         if (editorElement) {
             ClassicEditor

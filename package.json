@@ -1,0 +1,25 @@
+{
+  "name": "ariatek-admin",
+  "version": "1.0.0",
+  "description": "\"# HTML_Dashboard-UI\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TegarSubagdja/HTML_Dashboard-UI.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/TegarSubagdja/HTML_Dashboard-UI/issues"
+  },
+  "homepage": "https://github.com/TegarSubagdja/HTML_Dashboard-UI#readme",
+  "dependencies": {
+    "bootstrap": "^5.3.8",
+    "bootstrap-icons": "^1.13.1"
+  }
+}

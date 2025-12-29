@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Orange Dashboard - Sneat Style</title>
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/font/bootstrap-icons.css ">
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+
+    <aside id="sidebar">
+        <div class="brand-logo text-uppercase">
+            <div class="logo-icon shadow-sm">
+                <i class="bi bi-snow"></i>
+            </div>
+            <span>AC-Smart</span>
+        </div>
+
+        <div class="mt-2 overflow-auto" style="max-height: calc(100vh - 100px);">
+            <small class="text-muted fw-bold px-4 mb-2 d-block" style="font-size: 0.7rem;">MENU UTAMA</small>
+
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a href="#" class="nav-link active">
+                        <i class="bi bi-grid-1x2-fill"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="bi bi-house-door"></i>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link menu-toggle" data-bs-toggle="collapse" href="#whyAriatek" role="button">
+                        <i class="bi bi-lightning-charge"></i>
+                        <span>Why Ariatek</span>
+                        <i class="bi bi-chevron-right ms-auto arrow-icon"></i>
+                    </a>
+                    <div class="collapse" id="whyAriatek">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item"><a class="nav-link" href="#">Who is Ariatek</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Vision and Mission</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link menu-toggle" data-bs-toggle="collapse" href="#ourProduct" role="button">
+                        <i class="bi bi-lightning-charge"></i>
+                        <span>Our Product</span>
+                        <i class="bi bi-chevron-right ms-auto arrow-icon"></i>
+                    </a>
+                    <div class="collapse" id="ourProduct">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item"><a class="nav-link" href="#">Automation</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Robotics</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Internet Of Things</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Internet Of Things</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Artificial Intelligence</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Technology</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link menu-toggle" data-bs-toggle="collapse" href="#ourService" role="button">
+                        <i class="bi bi-lightning-charge"></i>
+                        <span>Our Service</span>
+                        <i class="bi bi-chevron-right ms-auto arrow-icon"></i>
+                    </a>
+                    <div class="collapse" id="ourService">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item"><a class="nav-link" href="#">LMS Ariatek</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Certification</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Collaboration</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Seminar</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link menu-toggle" data-bs-toggle="collapse" href="#contact" role="button">
+                        <i class="bi bi-lightning-charge"></i>
+                        <span>Contact</span>
+                        <i class="bi bi-chevron-right ms-auto arrow-icon"></i>
+                    </a>
+                    <div class="collapse" id="contact">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item"><a class="nav-link" href="#">List Distribution</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Service Center</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Our Customer</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+
+            <small class="text-muted fw-bold px-4 mt-4 mb-2 d-block" style="font-size: 0.7rem;">LAPORAN</small>
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a href="#" class="nav-link"><i class="bi bi-file-earmark-bar-graph"></i> Riwayat Biaya</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link"><i class="bi bi-gear"></i> Pengaturan</a>
+                </li>
+            </ul>
+        </div>
+    </aside>
+
+    <main id="content">
+        <nav class="navbar navbar-expand navbar-floating z-3">
+            <div class="container-fluid px-0">
+                <button class="btn btn-link d-lg-none me-2" id="sidebarToggle">
+                    <i class="bi bi-list fs-3 text-dark"></i>
+                </button>
+
+                <div class="search-box d-none d-md-flex">
+                    <i class="bi bi-search text-muted me-2"></i>
+                    <input type="text" class="border-0 bg-transparent" placeholder="Cari data..."
+                        style="outline: none;">
+                </div>
+
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item me-3">
+                        <i class="bi bi-bell fs-5 text-muted"></i>
+                        </a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle p-0 d-flex align-items-center" href="#"
+                            data-bs-toggle="dropdown">
+                            <img src="https://ui-avatars.com/api/?name=Admin+User&background=ff3e1d&color=fff"
+                                class="rounded-circle" width="38">
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+                            <li><a class="dropdown-item" href="#">My Profile</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item text-danger" href="#">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="container-fluid px-0">
+            <!-- Row Banner -->
+            <div class="row">
+                <iframe style="height: 480px;" src="http://localhost/ariatek/#banner" scrolling="no"
+                    frameborder="0"></iframe>
+            </div>
+            <div class="row">
+                <div class="mb-3">
+                    <label class="form-label fw-bold small text-muted text-uppercase">Deskripsi Laporan / Catatan
+                        Teknisi</label>
+                    <div id="editor-container">
+                        <div class="editor" id="editor">
+                            <p>Tulis detail pengecekan AC di sini...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Row Desk Banner -->
+            <div class="row mt-4">
+                <iframe style="height: 350px;" class="cms-preview" scrolling="no"
+                    src="http://localhost/ariatek/#desk"></iframe>
+            </div>
+            <div class="row">
+                <div class="mb-3">
+                    <label class="form-label fw-bold small text-muted text-uppercase">Deskripsi Laporan / Catatan
+                        Teknisi</label>
+                    <div id="editor-container">
+                        <div class="editor" id="editor">
+                            <p>Tulis detail pengecekan AC di sini...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Row Video -->
+            <div class="row mt-4">
+                <iframe style="height: 500px;" class="cms-preview" scrolling="no"
+                    src="http://localhost/ariatek/#video"></iframe>
+            </div>
+            <div class="row">
+                <div class="mb-3">
+                    <label class="form-label fw-bold small text-muted text-uppercase">Deskripsi Laporan / Catatan
+                        Teknisi</label>
+                    <div id="editor-container">
+                        <div class="editor" id="editor">
+                            <p>Tulis detail pengecekan AC di sini...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.ckeditor.com/ckeditor5/40.0.0/classic/ckeditor.js"></script>
+    <script src="../assets/js/script.js"></script>
+</body>
+
+</html>
