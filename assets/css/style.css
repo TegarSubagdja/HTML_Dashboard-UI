@@ -19,6 +19,11 @@
     --shadow-focus: 0 0 0 0.25rem rgba(255, 62, 29, 0.1);
 }
 
+.nav-link:focus,
+.nav-link:active {
+    color: var(--primary-orange) !important;
+}
+
 body {
     background-color: var(--body-bg);
     font-family: var(--font-main);
@@ -43,6 +48,7 @@ body {
     padding: 1.5rem;
     display: flex;
     align-items: center;
+    justify-content: center;
     font-weight: 700;
     font-size: 1.25rem;
     color: var(--text-dark);
@@ -94,7 +100,7 @@ body {
 
 .sub-menu .nav-link {
     font-size: 0.875rem;
-    margin: 0.1rem 1rem;
+    margin: 0.1rem 0.1rem;
     position: relative;
 }
 
@@ -544,6 +550,10 @@ input[type="file"]::file-selector-button {
 
 .dropdown-item.text-danger:hover {
     background-color: #ffe0db;
+}
+
+.img-sidebard {
+    max-width: 8vw;
 }
 
 @media (max-width: 992px) {
