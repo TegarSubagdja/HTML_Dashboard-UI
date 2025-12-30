@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modern Orange Dashboard - Sneat Style</title>
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23ff3e1d'/><text y='50%' x='50%' dominant-baseline='central' text-anchor='middle' font-size='70' fill='white'>A</text></svg>">
     <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/font/bootstrap-icons.css ">
     <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&display=swap"
@@ -121,8 +123,8 @@
 
                 <div class="search-box d-none d-md-flex">
                     <i class="bi bi-search text-muted me-2"></i>
-                    <input type="text" class="border-0 bg-transparent input-navbar" placeholder="Cari data..."
-                        style="outline: none;">
+                    <input type="text" name="nav_search" aria-label="Search Data"
+                        class="border-0 bg-transparent input-navbar" placeholder="Cari data..." style="outline: none;">
                 </div>
 
                 <ul class="navbar-nav ms-auto align-items-center">
@@ -170,13 +172,13 @@
                             <div class="p-3 bg-light rounded-3">
                                 <div class="row">
                                     <div class="col-6">
-                                        <div class="card border-0 shadow-sm mb-4">
+                                        <div class="card border-0 shadow-sm mb-4 video-upload-widget">
                                             <div class="card-body">
-                                                <div id="videoDropzone"
-                                                    class="dropzone p-5 border border-2 border-dashed rounded-3 text-center transition-all position-relative"
-                                                    onclick="document.getElementById('videoFileInput').click()">
+                                                <div
+                                                    class="dropzone p-5 border border-2 border-dashed rounded-3 text-center transition-all position-relative js-dropzone">
 
-                                                    <input type="file" id="videoFileInput"
+                                                    <input type="file" id="rts1_video_1" name="rts1_video_1"
+                                                        aria-label="Upload Video 1" class="js-file-input"
                                                         accept="video/mp4,video/mov,video/avi" hidden>
 
                                                     <div class="dz-message" style="pointer-events: none;">
@@ -189,29 +191,29 @@
                                                     </div>
                                                 </div>
 
-                                                <div id="videoPreview" class="mt-4" style="display: none;">
+                                                <div class="mt-4 js-video-preview" style="display: none;">
                                                     <div
                                                         class="d-flex align-items-center bg-light p-3 rounded-3 border">
                                                         <i
                                                             class="bi bi-file-earmark-play-fill text-primary-orange fs-3 me-3"></i>
                                                         <div class="flex-grow-1">
-                                                            <span id="fileName"
-                                                                class="fw-semibold text-dark d-block text-truncate"
+                                                            <span
+                                                                class="fw-semibold text-dark d-block text-truncate js-file-name"
                                                                 style="max-width: 250px;"></span>
-                                                            <small id="fileSize" class="text-muted"></small>
+                                                            <small class="text-muted js-file-size"></small>
                                                         </div>
                                                         <button type="button"
-                                                            class="btn btn-sm btn-outline-danger shadow-none"
-                                                            id="removeFileButton">
+                                                            class="btn btn-sm btn-outline-danger shadow-none js-remove-file">
                                                             <i class="bi bi-x-lg"></i>
                                                         </button>
                                                     </div>
-                                                    <video id="videoPlayer" class="w-100 mt-3 rounded shadow-sm"
+                                                    <video
+                                                        class="w-100 mt-3 rounded shadow-sm js-video-player video-player-style"
                                                         controls
                                                         style="max-height: 250px; display: none; object-fit: cover;"></video>
 
-                                                    <button id="uploadButton"
-                                                        class="btn btn-primary-orange w-100 mt-3 py-2 shadow-none"
+                                                    <button
+                                                        class="btn btn-primary-orange w-100 mt-3 py-2 shadow-none js-upload-btn"
                                                         disabled>
                                                         <i class="bi bi-upload me-2"></i>Mulai Unggah
                                                     </button>
@@ -220,13 +222,13 @@
                                         </div>
                                     </div>
                                     <div class="col-6">
-                                        <div class="card border-0 shadow-sm mb-4">
+                                        <div class="card border-0 shadow-sm mb-4 video-upload-widget">
                                             <div class="card-body">
-                                                <div id="videoDropzone"
-                                                    class="dropzone p-5 border border-2 border-dashed rounded-3 text-center transition-all position-relative"
-                                                    onclick="document.getElementById('videoFileInput').click()">
+                                                <div
+                                                    class="dropzone p-5 border border-2 border-dashed rounded-3 text-center transition-all position-relative js-dropzone">
 
-                                                    <input type="file" id="videoFileInput"
+                                                    <input type="file" id="rts1_video_2" name="rts1_video_2"
+                                                        aria-label="Upload Video 2" class="js-file-input"
                                                         accept="video/mp4,video/mov,video/avi" hidden>
 
                                                     <div class="dz-message" style="pointer-events: none;">
@@ -239,29 +241,29 @@
                                                     </div>
                                                 </div>
 
-                                                <div id="videoPreview" class="mt-4" style="display: none;">
+                                                <div class="mt-4 js-video-preview" style="display: none;">
                                                     <div
                                                         class="d-flex align-items-center bg-light p-3 rounded-3 border">
                                                         <i
                                                             class="bi bi-file-earmark-play-fill text-primary-orange fs-3 me-3"></i>
                                                         <div class="flex-grow-1">
-                                                            <span id="fileName"
-                                                                class="fw-semibold text-dark d-block text-truncate"
+                                                            <span
+                                                                class="fw-semibold text-dark d-block text-truncate js-file-name"
                                                                 style="max-width: 250px;"></span>
-                                                            <small id="fileSize" class="text-muted"></small>
+                                                            <small class="text-muted js-file-size"></small>
                                                         </div>
                                                         <button type="button"
-                                                            class="btn btn-sm btn-outline-danger shadow-none"
-                                                            id="removeFileButton">
+                                                            class="btn btn-sm btn-outline-danger shadow-none js-remove-file">
                                                             <i class="bi bi-x-lg"></i>
                                                         </button>
                                                     </div>
-                                                    <video id="videoPlayer" class="w-100 mt-3 rounded shadow-sm"
+                                                    <video
+                                                        class="w-100 mt-3 rounded shadow-sm js-video-player video-player-style"
                                                         controls
                                                         style="max-height: 250px; display: none; object-fit: cover;"></video>
 
-                                                    <button id="uploadButton"
-                                                        class="btn btn-primary-orange w-100 mt-3 py-2 shadow-none"
+                                                    <button
+                                                        class="btn btn-primary-orange w-100 mt-3 py-2 shadow-none js-upload-btn"
                                                         disabled>
                                                         <i class="bi bi-upload me-2"></i>Mulai Unggah
                                                     </button>
@@ -272,7 +274,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="mt-3">
-                                        <div id="editor-container">
+                                        <div class="editor-container">
                                             <div class="editor">
                                                 <p>Tulis detail pengecekan AC di sini...</p>
                                             </div>
@@ -281,7 +283,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="mt-3">
-                                        <div id="editor-container">
+                                        <div class="editor-container">
                                             <div class="editor">
                                                 <p>Tulis detail pengecekan AC di sini...</p>
                                             </div>
@@ -317,7 +319,7 @@
                                     <div class="col-12">
                                         <label
                                             class="form-label fw-semibold text-muted small text-uppercase">Judul</label>
-                                        <div id="editor-container">
+                                        <div class="editor-container">
                                             <div class="editor">
                                                 <p>Tulis detail pengecekan AC di sini...</p>
                                             </div>
@@ -334,7 +336,8 @@
                                             <span class="input-group-text border-0 bg-transparent px-3">
                                                 <i class="bi bi-pencil-square text-muted fs-5"></i>
                                             </span>
-                                            <textarea class="form-control border-0 shadow-none py-3" id="catatanTeknis"
+                                            <textarea
+                                                class="form-control border-0 shadow-none py-3 catatan-teknis js-char-limit-input"
                                                 rows="4"
                                                 placeholder="Tuliskan detail pengecekan atau keluhan pelanggan di sini..."
                                                 style="resize: none;"></textarea>
@@ -342,7 +345,8 @@
 
                                         <div class="form-text text-end mt-2">
                                             <small class="bg-light px-2 py-1 rounded border">
-                                                <span id="charCount" class="fw-bold text-primary-orange">0</span> / 500
+                                                <span class="fw-bold text-primary-orange js-char-count-display">0</span>
+                                                / 500
                                                 <span class="text-muted">Karakter</span>
                                             </small>
                                         </div>
@@ -350,53 +354,55 @@
                                 </div>
                                 <div class="row mt-3">
                                     <div class="col-12">
-                                        <div class="card">
-                                            <div class="card-body">
-                                                <div id="videoDropzone"
-                                                    class="dropzone p-5 border border-2 border-dashed rounded-3 text-center transition-all position-relative"
-                                                    onclick="document.getElementById('videoFileInput').click()">
-
-                                                    <input type="file" id="videoFileInput"
-                                                        accept="video/mp4,video/mov,video/avi" hidden>
-
-                                                    <div class="dz-message" style="pointer-events: none;">
-                                                        <i
-                                                            class="bi bi-cloud-arrow-up text-primary-orange display-5 mb-3"></i>
-                                                        <h6 class="fw-bold text-dark mb-2">Klik atau Seret File ke Sini
-                                                        </h6>
-                                                        <p class="text-muted mb-0 small">Format MP4, MOV, atau AVI
-                                                            (Maks.
-                                                            50MB)
-                                                        </p>
-                                                    </div>
-                                                </div>
-
-                                                <div id="videoPreview" class="mt-4" style="display: none;">
+                                        <div class="card bg-transparent shadow-none border-0">
+                                            <div class="card-body p-0">
+                                                <div class="video-upload-widget">
                                                     <div
-                                                        class="d-flex align-items-center bg-light p-3 rounded-3 border">
-                                                        <i
-                                                            class="bi bi-file-earmark-play-fill text-primary-orange fs-3 me-3"></i>
-                                                        <div class="flex-grow-1">
-                                                            <span id="fileName"
-                                                                class="fw-semibold text-dark d-block text-truncate"
-                                                                style="max-width: 250px;"></span>
-                                                            <small id="fileSize" class="text-muted"></small>
+                                                        class="dropzone p-5 border border-2 border-dashed rounded-3 text-center transition-all position-relative js-dropzone">
+
+                                                        <input type="file" id="rts2_video_1" name="rts2_video_1"
+                                                            aria-label="Upload Video RTS 2" class="js-file-input"
+                                                            accept="video/mp4,video/mov,video/avi" hidden>
+
+                                                        <div class="dz-message" style="pointer-events: none;">
+                                                            <i
+                                                                class="bi bi-cloud-arrow-up text-primary-orange display-5 mb-3"></i>
+                                                            <h6 class="fw-bold text-dark mb-2">Klik atau Seret File ke
+                                                                Sini
+                                                            </h6>
+                                                            <p class="text-muted mb-0 small">Format MP4, MOV, atau AVI
+                                                                (Maks. 50MB)
+                                                            </p>
                                                         </div>
-                                                        <button type="button"
-                                                            class="btn btn-sm btn-outline-danger shadow-none"
-                                                            id="removeFileButton">
-                                                            <i class="bi bi-x-lg"></i>
+                                                    </div>
+
+                                                    <div class="mt-4 js-video-preview" style="display: none;">
+                                                        <div
+                                                            class="d-flex align-items-center bg-light p-3 rounded-3 border">
+                                                            <i
+                                                                class="bi bi-file-earmark-play-fill text-primary-orange fs-3 me-3"></i>
+                                                            <div class="flex-grow-1">
+                                                                <span
+                                                                    class="fw-semibold text-dark d-block text-truncate js-file-name"
+                                                                    style="max-width: 250px;"></span>
+                                                                <small class="text-muted js-file-size"></small>
+                                                            </div>
+                                                            <button type="button"
+                                                                class="btn btn-sm btn-outline-danger shadow-none js-remove-file">
+                                                                <i class="bi bi-x-lg"></i>
+                                                            </button>
+                                                        </div>
+                                                        <video
+                                                            class="w-100 mt-3 rounded shadow-sm js-video-player video-player-style"
+                                                            controls
+                                                            style="max-height: 250px; display: none; object-fit: cover;"></video>
+
+                                                        <button
+                                                            class="btn btn-primary-orange w-100 mt-3 py-2 shadow-none js-upload-btn"
+                                                            disabled>
+                                                            <i class="bi bi-upload me-2"></i>Mulai Unggah
                                                         </button>
                                                     </div>
-                                                    <video id="videoPlayer" class="w-100 mt-3 rounded shadow-sm"
-                                                        controls
-                                                        style="max-height: 250px; display: none; object-fit: cover;"></video>
-
-                                                    <button id="uploadButton"
-                                                        class="btn btn-primary-orange w-100 mt-3 py-2 shadow-none"
-                                                        disabled>
-                                                        <i class="bi bi-upload me-2"></i>Mulai Unggah
-                                                    </button>
                                                 </div>
                                             </div>
                                         </div>
@@ -404,25 +410,27 @@
                                 </div>
                                 <div class="row mt-3">
                                     <div class="col-12">
-                                        <label
-                                            class="form-label fw-semibold text-muted small mt-3 text-uppercase">Judul</label>
+                                        <label class="form-label fw-semibold text-muted small mt-3 text-uppercase"
+                                            for="rts2_ac_title">Judul</label>
                                         <div class="input-group input-group-merge border rounded-3">
                                             <span class="input-group-text border-0 bg-transparent"><i
                                                     class="bi bi-search text-muted"></i></span>
-                                            <input type="text" class="form-control border-0 shadow-none ps-0"
+                                            <input type="text" id="rts2_ac_title" name="rts2_ac_title"
+                                                class="form-control border-0 shadow-none ps-0"
                                                 placeholder="Ketik nama AC...">
                                         </div>
                                     </div>
                                     <div class="col-12">
-                                        <label
-                                            class="form-label fw-semibold text-muted small mt-3 text-uppercase">Deskripsi</label>
+                                        <label class="form-label fw-semibold text-muted small mt-3 text-uppercase"
+                                            for="rts2_ac_desc">Deskripsi</label>
 
                                         <div
                                             class="input-group input-group-merge border rounded-3 overflow-hidden custom-textarea-group">
                                             <span class="input-group-text border-0 bg-transparent px-3">
                                                 <i class="bi bi-pencil-square text-muted fs-5"></i>
                                             </span>
-                                            <textarea class="form-control border-0 shadow-none py-3" id="catatanTeknis"
+                                            <textarea id="rts2_ac_desc" name="rts2_ac_desc"
+                                                class="form-control border-0 shadow-none py-3 catatan-teknis js-char-limit-input"
                                                 rows="4"
                                                 placeholder="Tuliskan detail pengecekan atau keluhan pelanggan di sini..."
                                                 style="resize: none;"></textarea>
@@ -430,7 +438,8 @@
 
                                         <div class="form-text text-end mt-2">
                                             <small class="bg-light px-2 py-1 rounded border">
-                                                <span id="charCount" class="fw-bold text-primary-orange">0</span> / 500
+                                                <span class="fw-bold text-primary-orange js-char-count-display">0</span>
+                                                / 500
                                                 <span class="text-muted">Karakter</span>
                                             </small>
                                         </div>
@@ -463,25 +472,27 @@
                             <div class="p-3 bg-light rounded-3">
                                 <div class="row">
                                     <div class="col-12">
-                                        <label
-                                            class="form-label fw-semibold text-muted small text-uppercase">Judul</label>
+                                        <label class="form-label fw-semibold text-muted small text-uppercase"
+                                            for="rts3_main_title">Judul</label>
                                         <div class="input-group input-group-merge border rounded-3">
                                             <span class="input-group-text border-0 bg-transparent"><i
                                                     class="bi bi-type-h1 text-muted"></i></span>
-                                            <input type="text" class="form-control border-0 shadow-none"
+                                            <input type="text" id="rts3_main_title" name="rts3_main_title"
+                                                class="form-control border-0 shadow-none"
                                                 placeholder="Ketik nama AC...">
                                         </div>
                                     </div>
                                     <div class="col-12">
-                                        <label
-                                            class="form-label fw-semibold text-muted small mt-3 text-uppercase">Deskripsi</label>
+                                        <label class="form-label fw-semibold text-muted small mt-3 text-uppercase"
+                                            for="rts3_main_desc">Deskripsi</label>
 
                                         <div
                                             class="input-group input-group-merge border rounded-3 overflow-hidden custom-textarea-group">
                                             <span class="input-group-text border-0 bg-transparent px-3">
                                                 <i class="bi bi-pencil-square text-muted fs-5"></i>
                                             </span>
-                                            <textarea class="form-control border-0 shadow-none py-3" id="catatanTeknis"
+                                            <textarea id="rts3_main_desc" name="rts3_main_desc"
+                                                class="form-control border-0 shadow-none py-3 catatan-teknis js-char-limit-input"
                                                 rows="4"
                                                 placeholder="Tuliskan detail pengecekan atau keluhan pelanggan di sini..."
                                                 style="resize: none;"></textarea>
@@ -489,7 +500,8 @@
 
                                         <div class="form-text text-end mt-2">
                                             <small class="bg-light px-2 py-1 rounded border">
-                                                <span id="charCount" class="fw-bold text-primary-orange">0</span> / 500
+                                                <span class="fw-bold text-primary-orange js-char-count-display">0</span>
+                                                / 500
                                                 <span class="text-muted">Karakter</span>
                                             </small>
                                         </div>
@@ -497,23 +509,25 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-4">
-                                        <label
-                                            class="form-label fw-semibold text-muted small text-uppercase">Judul</label>
+                                        <label class="form-label fw-semibold text-muted small text-uppercase"
+                                            for="rts3_sub1_title">Judul</label>
                                         <div class="input-group input-group-merge border rounded-3">
                                             <span class="input-group-text border-0 bg-transparent"><i
                                                     class="bi bi-type-h1 text-muted"></i></span>
-                                            <input type="text" class="form-control border-0 shadow-none"
+                                            <input type="text" id="rts3_sub1_title" name="rts3_sub1_title"
+                                                class="form-control border-0 shadow-none"
                                                 placeholder="Ketik nama AC...">
                                         </div>
-                                        <label
-                                            class="form-label fw-semibold text-muted small mt-3 text-uppercase">Deskripsi</label>
+                                        <label class="form-label fw-semibold text-muted small mt-3 text-uppercase"
+                                            for="rts3_sub1_desc">Deskripsi</label>
 
                                         <div
                                             class="input-group input-group-merge border rounded-3 overflow-hidden custom-textarea-group">
                                             <span class="input-group-text border-0 bg-transparent px-3">
                                                 <i class="bi bi-pencil-square text-muted fs-5"></i>
                                             </span>
-                                            <textarea class="form-control border-0 shadow-none py-3" id="catatanTeknis"
+                                            <textarea id="rts3_sub1_desc" name="rts3_sub1_desc"
+                                                class="form-control border-0 shadow-none py-3 catatan-teknis js-char-limit-input"
                                                 rows="4"
                                                 placeholder="Tuliskan detail pengecekan atau keluhan pelanggan di sini..."
                                                 style="resize: none;"></textarea>
@@ -521,29 +535,32 @@
 
                                         <div class="form-text text-end mt-2">
                                             <small class="bg-light px-2 py-1 rounded border">
-                                                <span id="charCount" class="fw-bold text-primary-orange">0</span> / 500
+                                                <span class="fw-bold text-primary-orange js-char-count-display">0</span>
+                                                / 500
                                                 <span class="text-muted">Karakter</span>
                                             </small>
                                         </div>
                                     </div>
                                     <div class="col-4">
-                                        <label
-                                            class="form-label fw-semibold text-muted small text-uppercase">Judul</label>
+                                        <label class="form-label fw-semibold text-muted small text-uppercase"
+                                            for="rts3_sub2_title">Judul</label>
                                         <div class="input-group input-group-merge border rounded-3">
                                             <span class="input-group-text border-0 bg-transparent"><i
                                                     class="bi bi-type-h1 text-muted"></i></span>
-                                            <input type="text" class="form-control border-0 shadow-none"
+                                            <input type="text" id="rts3_sub2_title" name="rts3_sub2_title"
+                                                class="form-control border-0 shadow-none"
                                                 placeholder="Ketik nama AC...">
                                         </div>
-                                        <label
-                                            class="form-label fw-semibold text-muted small mt-3 text-uppercase">Deskripsi</label>
+                                        <label class="form-label fw-semibold text-muted small mt-3 text-uppercase"
+                                            for="rts3_sub2_desc">Deskripsi</label>
 
                                         <div
                                             class="input-group input-group-merge border rounded-3 overflow-hidden custom-textarea-group">
                                             <span class="input-group-text border-0 bg-transparent px-3">
                                                 <i class="bi bi-pencil-square text-muted fs-5"></i>
                                             </span>
-                                            <textarea class="form-control border-0 shadow-none py-3" id="catatanTeknis"
+                                            <textarea id="rts3_sub2_desc" name="rts3_sub2_desc"
+                                                class="form-control border-0 shadow-none py-3 catatan-teknis js-char-limit-input"
                                                 rows="4"
                                                 placeholder="Tuliskan detail pengecekan atau keluhan pelanggan di sini..."
                                                 style="resize: none;"></textarea>
@@ -551,29 +568,32 @@
 
                                         <div class="form-text text-end mt-2">
                                             <small class="bg-light px-2 py-1 rounded border">
-                                                <span id="charCount" class="fw-bold text-primary-orange">0</span> / 500
+                                                <span class="fw-bold text-primary-orange js-char-count-display">0</span>
+                                                / 500
                                                 <span class="text-muted">Karakter</span>
                                             </small>
                                         </div>
                                     </div>
                                     <div class="col-4">
-                                        <label
-                                            class="form-label fw-semibold text-muted small text-uppercase">Judul</label>
+                                        <label class="form-label fw-semibold text-muted small text-uppercase"
+                                            for="rts3_sub3_title">Judul</label>
                                         <div class="input-group input-group-merge border rounded-3">
                                             <span class="input-group-text border-0 bg-transparent"><i
                                                     class="bi bi-type-h1 text-muted"></i></span>
-                                            <input type="text" class="form-control border-0 shadow-none"
+                                            <input type="text" id="rts3_sub3_title" name="rts3_sub3_title"
+                                                class="form-control border-0 shadow-none"
                                                 placeholder="Ketik nama AC...">
                                         </div>
-                                        <label
-                                            class="form-label fw-semibold text-muted small mt-3 text-uppercase">Deskripsi</label>
+                                        <label class="form-label fw-semibold text-muted small mt-3 text-uppercase"
+                                            for="rts3_sub3_desc">Deskripsi</label>
 
                                         <div
                                             class="input-group input-group-merge border rounded-3 overflow-hidden custom-textarea-group">
                                             <span class="input-group-text border-0 bg-transparent px-3">
                                                 <i class="bi bi-pencil-square text-muted fs-5"></i>
                                             </span>
-                                            <textarea class="form-control border-0 shadow-none py-3" id="catatanTeknis"
+                                            <textarea id="rts3_sub3_desc" name="rts3_sub3_desc"
+                                                class="form-control border-0 shadow-none py-3 catatan-teknis js-char-limit-input"
                                                 rows="4"
                                                 placeholder="Tuliskan detail pengecekan atau keluhan pelanggan di sini..."
                                                 style="resize: none;"></textarea>
@@ -581,29 +601,32 @@
 
                                         <div class="form-text text-end mt-2">
                                             <small class="bg-light px-2 py-1 rounded border">
-                                                <span id="charCount" class="fw-bold text-primary-orange">0</span> / 500
+                                                <span class="fw-bold text-primary-orange js-char-count-display">0</span>
+                                                / 500
                                                 <span class="text-muted">Karakter</span>
                                             </small>
                                         </div>
                                     </div>
                                     <div class="col-4">
-                                        <label
-                                            class="form-label fw-semibold text-muted small text-uppercase">Judul</label>
+                                        <label class="form-label fw-semibold text-muted small text-uppercase"
+                                            for="rts3_sub4_title">Judul</label>
                                         <div class="input-group input-group-merge border rounded-3">
                                             <span class="input-group-text border-0 bg-transparent"><i
                                                     class="bi bi-type-h1 text-muted"></i></span>
-                                            <input type="text" class="form-control border-0 shadow-none"
+                                            <input type="text" id="rts3_sub4_title" name="rts3_sub4_title"
+                                                class="form-control border-0 shadow-none"
                                                 placeholder="Ketik nama AC...">
                                         </div>
-                                        <label
-                                            class="form-label fw-semibold text-muted small mt-3 text-uppercase">Deskripsi</label>
+                                        <label class="form-label fw-semibold text-muted small mt-3 text-uppercase"
+                                            for="rts3_sub4_desc">Deskripsi</label>
 
                                         <div
                                             class="input-group input-group-merge border rounded-3 overflow-hidden custom-textarea-group">
                                             <span class="input-group-text border-0 bg-transparent px-3">
                                                 <i class="bi bi-pencil-square text-muted fs-5"></i>
                                             </span>
-                                            <textarea class="form-control border-0 shadow-none py-3" id="catatanTeknis"
+                                            <textarea id="rts3_sub4_desc" name="rts3_sub4_desc"
+                                                class="form-control border-0 shadow-none py-3 catatan-teknis js-char-limit-input"
                                                 rows="4"
                                                 placeholder="Tuliskan detail pengecekan atau keluhan pelanggan di sini..."
                                                 style="resize: none;"></textarea>
@@ -611,29 +634,32 @@
 
                                         <div class="form-text text-end mt-2">
                                             <small class="bg-light px-2 py-1 rounded border">
-                                                <span id="charCount" class="fw-bold text-primary-orange">0</span> / 500
+                                                <span class="fw-bold text-primary-orange js-char-count-display">0</span>
+                                                / 500
                                                 <span class="text-muted">Karakter</span>
                                             </small>
                                         </div>
                                     </div>
                                     <div class="col-4">
-                                        <label
-                                            class="form-label fw-semibold text-muted small text-uppercase">Judul</label>
+                                        <label class="form-label fw-semibold text-muted small text-uppercase"
+                                            for="rts3_sub5_title">Judul</label>
                                         <div class="input-group input-group-merge border rounded-3">
                                             <span class="input-group-text border-0 bg-transparent"><i
                                                     class="bi bi-type-h1 text-muted"></i></span>
-                                            <input type="text" class="form-control border-0 shadow-none"
+                                            <input type="text" id="rts3_sub5_title" name="rts3_sub5_title"
+                                                class="form-control border-0 shadow-none"
                                                 placeholder="Ketik nama AC...">
                                         </div>
-                                        <label
-                                            class="form-label fw-semibold text-muted small mt-3 text-uppercase">Deskripsi</label>
+                                        <label class="form-label fw-semibold text-muted small mt-3 text-uppercase"
+                                            for="rts3_sub5_desc">Deskripsi</label>
 
                                         <div
                                             class="input-group input-group-merge border rounded-3 overflow-hidden custom-textarea-group">
                                             <span class="input-group-text border-0 bg-transparent px-3">
                                                 <i class="bi bi-pencil-square text-muted fs-5"></i>
                                             </span>
-                                            <textarea class="form-control border-0 shadow-none py-3" id="catatanTeknis"
+                                            <textarea id="rts3_sub5_desc" name="rts3_sub5_desc"
+                                                class="form-control border-0 shadow-none py-3 catatan-teknis js-char-limit-input"
                                                 rows="4"
                                                 placeholder="Tuliskan detail pengecekan atau keluhan pelanggan di sini..."
                                                 style="resize: none;"></textarea>
@@ -641,7 +667,8 @@
 
                                         <div class="form-text text-end mt-2">
                                             <small class="bg-light px-2 py-1 rounded border">
-                                                <span id="charCount" class="fw-bold text-primary-orange">0</span> / 500
+                                                <span class="fw-bold text-primary-orange js-char-count-display">0</span>
+                                                / 500
                                                 <span class="text-muted">Karakter</span>
                                             </small>
                                         </div>
@@ -674,78 +701,82 @@
                             <div class="p-3 bg-light rounded-3">
                                 <div class="row">
                                     <div class="col-3">
-                                        <label class="form-label fw-semibold text-muted small text-uppercase">Judul
-                                            1</label>
+                                        <label class="form-label fw-semibold text-muted small text-uppercase"
+                                            for="rts4_item1_title">Judul 1</label>
                                         <div class="input-group input-group-merge border rounded-3">
                                             <span class="input-group-text border-0 bg-transparent"><i
                                                     class="bi bi-type-h1 text-muted"></i></span>
-                                            <input type="text" class="form-control border-0 shadow-none"
+                                            <input type="text" id="rts4_item1_title" name="rts4_item1_title"
+                                                class="form-control border-0 shadow-none"
                                                 placeholder="Masukan judul...">
                                         </div>
-                                        <label
-                                            class="form-label fw-semibold text-muted small text-uppercase mt-3">Persentase
-                                            1</label>
+                                        <label class="form-label fw-semibold text-muted small text-uppercase mt-3"
+                                            for="rts4_item1_percent">Persentase 1</label>
                                         <div class="input-group input-group-merge border rounded-3">
                                             <span class="input-group-text border-0 bg-transparent"><i
                                                     class="bi bi-type-h2 text-muted"></i></span>
-                                            <input type="text" class="form-control border-0 shadow-none"
+                                            <input type="text" id="rts4_item1_percent" name="rts4_item1_percent"
+                                                class="form-control border-0 shadow-none"
                                                 placeholder="Masukan nilai...">
                                         </div>
                                     </div>
                                     <div class="col-3">
-                                        <label class="form-label fw-semibold text-muted small text-uppercase">Judul
-                                            2</label>
+                                        <label class="form-label fw-semibold text-muted small text-uppercase"
+                                            for="rts4_item2_title">Judul 2</label>
                                         <div class="input-group input-group-merge border rounded-3">
                                             <span class="input-group-text border-0 bg-transparent"><i
                                                     class="bi bi-type-h1 text-muted"></i></span>
-                                            <input type="text" class="form-control border-0 shadow-none"
+                                            <input type="text" id="rts4_item2_title" name="rts4_item2_title"
+                                                class="form-control border-0 shadow-none"
                                                 placeholder="Masukan judul...">
                                         </div>
-                                        <label
-                                            class="form-label fw-semibold text-muted small text-uppercase mt-3">Persentase
-                                            2</label>
+                                        <label class="form-label fw-semibold text-muted small text-uppercase mt-3"
+                                            for="rts4_item2_percent">Persentase 2</label>
                                         <div class="input-group input-group-merge border rounded-3">
                                             <span class="input-group-text border-0 bg-transparent"><i
                                                     class="bi bi-type-h2 text-muted"></i></span>
-                                            <input type="text" class="form-control border-0 shadow-none"
+                                            <input type="text" id="rts4_item2_percent" name="rts4_item2_percent"
+                                                class="form-control border-0 shadow-none"
                                                 placeholder="Masukan nilai...">
                                         </div>
                                     </div>
                                     <div class="col-3">
-                                        <label class="form-label fw-semibold text-muted small text-uppercase">Judul
-                                            3</label>
+                                        <label class="form-label fw-semibold text-muted small text-uppercase"
+                                            for="rts4_item3_title">Judul 3</label>
                                         <div class="input-group input-group-merge border rounded-3">
                                             <span class="input-group-text border-0 bg-transparent"><i
                                                     class="bi bi-type-h1 text-muted"></i></span>
-                                            <input type="text" class="form-control border-0 shadow-none"
+                                            <input type="text" id="rts4_item3_title" name="rts4_item3_title"
+                                                class="form-control border-0 shadow-none"
                                                 placeholder="Masukan judul...">
                                         </div>
-                                        <label
-                                            class="form-label fw-semibold text-muted small text-uppercase mt-3">Persentase
-                                            3</label>
+                                        <label class="form-label fw-semibold text-muted small text-uppercase mt-3"
+                                            for="rts4_item3_percent">Persentase 3</label>
                                         <div class="input-group input-group-merge border rounded-3">
                                             <span class="input-group-text border-0 bg-transparent"><i
                                                     class="bi bi-type-h2 text-muted"></i></span>
-                                            <input type="text" class="form-control border-0 shadow-none"
+                                            <input type="text" id="rts4_item3_percent" name="rts4_item3_percent"
+                                                class="form-control border-0 shadow-none"
                                                 placeholder="Masukan nilai...">
                                         </div>
                                     </div>
                                     <div class="col-3">
-                                        <label class="form-label fw-semibold text-muted small text-uppercase">Judul
-                                            4</label>
+                                        <label class="form-label fw-semibold text-muted small text-uppercase"
+                                            for="rts4_item4_title">Judul 4</label>
                                         <div class="input-group input-group-merge border rounded-3">
                                             <span class="input-group-text border-0 bg-transparent"><i
                                                     class="bi bi-type-h1 text-muted"></i></span>
-                                            <input type="text" class="form-control border-0 shadow-none"
+                                            <input type="text" id="rts4_item4_title" name="rts4_item4_title"
+                                                class="form-control border-0 shadow-none"
                                                 placeholder="Masukan judul...">
                                         </div>
-                                        <label
-                                            class="form-label fw-semibold text-muted small text-uppercase mt-3">Persentase
-                                            4</label>
+                                        <label class="form-label fw-semibold text-muted small text-uppercase mt-3"
+                                            for="rts4_item4_percent">Persentase 4</label>
                                         <div class="input-group input-group-merge border rounded-3">
                                             <span class="input-group-text border-0 bg-transparent"><i
                                                     class="bi bi-type-h2 text-muted"></i></span>
-                                            <input type="text" class="form-control border-0 shadow-none"
+                                            <input type="text" id="rts4_item4_percent" name="rts4_item4_percent"
+                                                class="form-control border-0 shadow-none"
                                                 placeholder="Masukan nilai...">
                                         </div>
                                     </div>
@@ -776,7 +807,7 @@
                         <div class="card-body pt-0 border-top-0">
                             <div class="p-3 bg-light rounded-3">
                                 <div class="row" id="dom">
-                                    <div id="card-product" class="col-md-4 col-lg-3 mb-4">
+                                    <div id="product-card-template" class="col-md-4 col-lg-3 mb-4">
                                         <div class="card card-product border-0 shadow-sm h-100">
                                             <div class="product-img-wrapper position-relative">
                                                 <div class="product-badge">
@@ -861,7 +892,7 @@
                         <div class="card-body pt-0 border-top-0">
                             <div class="p-3 bg-light rounded-3">
                                 <div class="row" id="dom2">
-                                    <div id="card-product" class="col-md-4 col-lg-3 mb-4">
+                                    <div id="product-card-template-2" class="col-md-4 col-lg-3 mb-4">
                                         <div class="card card-product border-0 shadow-sm h-100">
                                             <div class="product-img-wrapper position-relative">
                                                 <div class="product-badge">
@@ -925,19 +956,79 @@
                     </div>
                 </div>
             </div>
+            <!-- Row RTS 7 -->
+            <div class="row">
+                <div class="card border-0 shadow-sm mb-3">
+                    <div class="card-header bg-transparent border-0 py-3" data-bs-toggle="collapse" href="#collapseRTS7"
+                        role="button" aria-expanded="false" style="cursor: pointer;">
+
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center">
+                                <div class="bg-label-orange p-2 rounded me-3">
+                                    <i class="bi bi-6-square text-primary-orange"></i>
+                                </div>
+                                <h6 class="m-0 fw-bold">Content RTS 7 (Our Relation)</h6>
+                            </div>
+                            <i class="bi bi-chevron-right arrow-icon transition-all text-muted"></i>
+                        </div>
+                    </div>
+
+                    <div class="collapse" id="collapseRTS7">
+                        <div class="card-body pt-0 border-top-0">
+                            <div class="p-3 bg-light rounded-3">
+                                <div class="row">
+                                    <div id="product-card-template-2" class="col-md-4 col-lg-3 mb-4">
+                                        <div class="card card-product border-0 shadow-sm h-100">
+                                            <div class="position-absolute top-0 end-0 m-2" style="z-index: 2;">
+                                                <div class="dropdown">
+                                                    <button
+                                                        class="btn btn-icon btn-light btn-sm shadow-sm rounded-circle p-1"
+                                                        type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                        <i class="bi bi-three-dots-vertical"></i>
+                                                    </button>
+                                                    <ul class="dropdown-menu dropdown-menu-end shadow border-0 mt-2">
+                                                        <li>
+                                                            <a class="dropdown-item text-danger d-flex align-items-center"
+                                                                href="#">
+                                                                <i class="bi bi-dash-circle-fill me-2"></i>Jangan
+                                                                tampilkan
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                                                <i class="bi bi-pencil me-2"></i> Edit Data
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="img-container">
+                                                <img src="https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?auto=format&fit=crop&q=80&w=400"
+                                                    alt="AC Unit" class="w-100">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="row"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
 
     <script>
-        const template = document.getElementById('card-product');
+        const template = document.getElementById('product-card-template');
         const container = document.getElementById('dom');
         const container2 = document.getElementById('dom2');
 
         for (let i = 0; i < 10; i++) {
             const clone = template.cloneNode(true);
-
+            clone.removeAttribute('id');
             container.appendChild(clone);
-            container2.appendChild(clone)
+            container2.appendChild(clone.cloneNode(true));
         }
     </script>
 

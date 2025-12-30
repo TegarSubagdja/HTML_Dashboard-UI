@@ -314,8 +314,16 @@ input[type="file"]::file-selector-button {
 }
 
 .card-product {
-    overflow: hidden;
+    /* overflow: hidden; Removed to allow dropdown to show */
     border: none;
+    transition: transform 0.3s ease, z-index 0s;
+    position: relative;
+    /* Ensure it has a stacking context */
+}
+
+.card-product:hover {
+    z-index: 10;
+    /* Bring to front when hovering */
 }
 
 .product-img-wrapper {
@@ -329,6 +337,11 @@ input[type="file"]::file-selector-button {
     display: flex;
     align-items: center;
     justify-content: center;
+    /* Move overflow hidden here to keep image zoom contained inside the "frame" */
+    overflow: hidden;
+    /* Add border radius to top corners to match card */
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
 }
 
 .img-container img {
@@ -462,33 +475,29 @@ input[type="file"]::file-selector-button {
     pointer-events: none;
 }
 
-#videoPlayer {
+#videoPlayer,
+.video-player-style {
     border: 1px solid #d9dee3;
     background: #000;
 }
 
-/* Pastikan group pembungkus memiliki alignment yang baik */
 .custom-textarea-group {
     align-items: flex-start;
-    /* Menjaga ikon tetap di atas tapi sejajar baris pertama */
 }
 
 .custom-textarea-group .input-group-text {
     height: 54px;
-    /* Menyesuaikan dengan tinggi baris pertama textarea agar ikon center secara vertikal di baris awal */
     display: flex;
     align-items: center;
 }
 
-/* Styling TextArea Fokus */
 .input-group-merge:focus-within {
     border-color: var(--primary-orange) !important;
     background-color: #fff;
     box-shadow: 0 4px 12px rgba(255, 62, 29, 0.08);
-    /* Shadow lebih lembut saat fokus */
 }
 
-/* Padding dalam textarea agar tidak mepet */
+.form-control.catatan-teknis,
 .form-control#catatanTeknis {
     padding-right: 15px;
     line-height: 1.6;
