@@ -121,7 +121,7 @@
 
                 <div class="search-box d-none d-md-flex">
                     <i class="bi bi-search text-muted me-2"></i>
-                    <input type="text" class="border-0 bg-transparent" placeholder="Cari data..."
+                    <input type="text" class="border-0 bg-transparent input-navbar" placeholder="Cari data..."
                         style="outline: none;">
                 </div>
 
@@ -147,51 +147,780 @@
             </div>
         </nav>
 
-        <div class="container-fluid px-0">
-            <!-- Row Banner -->
+        <div class="container">
+            <!-- Row RTS 1 -->
             <div class="row">
-                <iframe style="height: 480px;" src="http://localhost/ariatek/#banner" scrolling="no"
-                    frameborder="0"></iframe>
-            </div>
-            <div class="row">
-                <div class="mb-3">
-                    <label class="form-label fw-bold small text-muted text-uppercase">Deskripsi Laporan / Catatan
-                        Teknisi</label>
-                    <div id="editor-container">
-                        <div class="editor" id="editor">
-                            <p>Tulis detail pengecekan AC di sini...</p>
+                <div class="card border-0 shadow-sm mb-3">
+                    <div class="card-header bg-transparent border-0 py-3" data-bs-toggle="collapse"
+                        href="#collapseBanner" role="button" aria-expanded="false" style="cursor: pointer;">
+
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center">
+                                <div class="bg-label-orange p-2 rounded me-3">
+                                    <i class="bi bi-1-square text-primary-orange"></i>
+                                </div>
+                                <h6 class="m-0 fw-bold">Content RTS 1</h6>
+                            </div>
+                            <i class="bi bi-chevron-right arrow-icon transition-all text-muted"></i>
+                        </div>
+                    </div>
+
+                    <div class="collapse" id="collapseBanner">
+                        <div class="card-body pt-0 border-top-0">
+                            <div class="p-3 bg-light rounded-3">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="card border-0 shadow-sm mb-4">
+                                            <div class="card-body">
+                                                <div id="videoDropzone"
+                                                    class="dropzone p-5 border border-2 border-dashed rounded-3 text-center transition-all position-relative"
+                                                    onclick="document.getElementById('videoFileInput').click()">
+
+                                                    <input type="file" id="videoFileInput"
+                                                        accept="video/mp4,video/mov,video/avi" hidden>
+
+                                                    <div class="dz-message" style="pointer-events: none;">
+                                                        <i
+                                                            class="bi bi-cloud-arrow-up text-primary-orange display-5 mb-3"></i>
+                                                        <h6 class="fw-bold text-dark mb-2">Klik atau Seret File ke Sini
+                                                        </h6>
+                                                        <p class="text-muted mb-0 small">Format MP4, MOV, atau AVI
+                                                            (Maks. 50MB)</p>
+                                                    </div>
+                                                </div>
+
+                                                <div id="videoPreview" class="mt-4" style="display: none;">
+                                                    <div
+                                                        class="d-flex align-items-center bg-light p-3 rounded-3 border">
+                                                        <i
+                                                            class="bi bi-file-earmark-play-fill text-primary-orange fs-3 me-3"></i>
+                                                        <div class="flex-grow-1">
+                                                            <span id="fileName"
+                                                                class="fw-semibold text-dark d-block text-truncate"
+                                                                style="max-width: 250px;"></span>
+                                                            <small id="fileSize" class="text-muted"></small>
+                                                        </div>
+                                                        <button type="button"
+                                                            class="btn btn-sm btn-outline-danger shadow-none"
+                                                            id="removeFileButton">
+                                                            <i class="bi bi-x-lg"></i>
+                                                        </button>
+                                                    </div>
+                                                    <video id="videoPlayer" class="w-100 mt-3 rounded shadow-sm"
+                                                        controls
+                                                        style="max-height: 250px; display: none; object-fit: cover;"></video>
+
+                                                    <button id="uploadButton"
+                                                        class="btn btn-primary-orange w-100 mt-3 py-2 shadow-none"
+                                                        disabled>
+                                                        <i class="bi bi-upload me-2"></i>Mulai Unggah
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="card border-0 shadow-sm mb-4">
+                                            <div class="card-body">
+                                                <div id="videoDropzone"
+                                                    class="dropzone p-5 border border-2 border-dashed rounded-3 text-center transition-all position-relative"
+                                                    onclick="document.getElementById('videoFileInput').click()">
+
+                                                    <input type="file" id="videoFileInput"
+                                                        accept="video/mp4,video/mov,video/avi" hidden>
+
+                                                    <div class="dz-message" style="pointer-events: none;">
+                                                        <i
+                                                            class="bi bi-cloud-arrow-up text-primary-orange display-5 mb-3"></i>
+                                                        <h6 class="fw-bold text-dark mb-2">Klik atau Seret File ke Sini
+                                                        </h6>
+                                                        <p class="text-muted mb-0 small">Format MP4, MOV, atau AVI
+                                                            (Maks. 50MB)</p>
+                                                    </div>
+                                                </div>
+
+                                                <div id="videoPreview" class="mt-4" style="display: none;">
+                                                    <div
+                                                        class="d-flex align-items-center bg-light p-3 rounded-3 border">
+                                                        <i
+                                                            class="bi bi-file-earmark-play-fill text-primary-orange fs-3 me-3"></i>
+                                                        <div class="flex-grow-1">
+                                                            <span id="fileName"
+                                                                class="fw-semibold text-dark d-block text-truncate"
+                                                                style="max-width: 250px;"></span>
+                                                            <small id="fileSize" class="text-muted"></small>
+                                                        </div>
+                                                        <button type="button"
+                                                            class="btn btn-sm btn-outline-danger shadow-none"
+                                                            id="removeFileButton">
+                                                            <i class="bi bi-x-lg"></i>
+                                                        </button>
+                                                    </div>
+                                                    <video id="videoPlayer" class="w-100 mt-3 rounded shadow-sm"
+                                                        controls
+                                                        style="max-height: 250px; display: none; object-fit: cover;"></video>
+
+                                                    <button id="uploadButton"
+                                                        class="btn btn-primary-orange w-100 mt-3 py-2 shadow-none"
+                                                        disabled>
+                                                        <i class="bi bi-upload me-2"></i>Mulai Unggah
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="mt-3">
+                                        <div id="editor-container">
+                                            <div class="editor">
+                                                <p>Tulis detail pengecekan AC di sini...</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="mt-3">
+                                        <div id="editor-container">
+                                            <div class="editor">
+                                                <p>Tulis detail pengecekan AC di sini...</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- Row Desk Banner -->
-            <div class="row mt-4">
-                <iframe style="height: 350px;" class="cms-preview" scrolling="no"
-                    src="http://localhost/ariatek/#desk"></iframe>
-            </div>
+            <!-- Row RTS 2 -->
             <div class="row">
-                <div class="mb-3">
-                    <label class="form-label fw-bold small text-muted text-uppercase">Deskripsi Laporan / Catatan
-                        Teknisi</label>
-                    <div id="editor-container">
-                        <div class="editor" id="editor">
-                            <p>Tulis detail pengecekan AC di sini...</p>
+                <div class="card border-0 shadow-sm mb-3">
+                    <div class="card-header bg-transparent border-0 py-3" data-bs-toggle="collapse" href="#collapseRTS2"
+                        role="button" aria-expanded="false" style="cursor: pointer;">
+
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center">
+                                <div class="bg-label-orange p-2 rounded me-3">
+                                    <i class="bi bi-2-square text-primary-orange"></i>
+                                </div>
+                                <h6 class="m-0 fw-bold">Content RTS 2 </h6>
+                            </div>
+                            <i class="bi bi-chevron-right arrow-icon transition-all text-muted"></i>
+                        </div>
+                    </div>
+
+                    <div class="collapse" id="collapseRTS2">
+                        <div class="card-body pt-0 border-top-0">
+                            <div class="p-3 bg-light rounded-3">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <label
+                                            class="form-label fw-semibold text-muted small text-uppercase">Judul</label>
+                                        <div id="editor-container">
+                                            <div class="editor">
+                                                <p>Tulis detail pengecekan AC di sini...</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <label
+                                            class="form-label fw-semibold text-muted small mt-3 text-uppercase">Deskripsi</label>
+
+                                        <div
+                                            class="input-group input-group-merge border rounded-3 overflow-hidden custom-textarea-group">
+                                            <span class="input-group-text border-0 bg-transparent px-3">
+                                                <i class="bi bi-pencil-square text-muted fs-5"></i>
+                                            </span>
+                                            <textarea class="form-control border-0 shadow-none py-3" id="catatanTeknis"
+                                                rows="4"
+                                                placeholder="Tuliskan detail pengecekan atau keluhan pelanggan di sini..."
+                                                style="resize: none;"></textarea>
+                                        </div>
+
+                                        <div class="form-text text-end mt-2">
+                                            <small class="bg-light px-2 py-1 rounded border">
+                                                <span id="charCount" class="fw-bold text-primary-orange">0</span> / 500
+                                                <span class="text-muted">Karakter</span>
+                                            </small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col-12">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <div id="videoDropzone"
+                                                    class="dropzone p-5 border border-2 border-dashed rounded-3 text-center transition-all position-relative"
+                                                    onclick="document.getElementById('videoFileInput').click()">
+
+                                                    <input type="file" id="videoFileInput"
+                                                        accept="video/mp4,video/mov,video/avi" hidden>
+
+                                                    <div class="dz-message" style="pointer-events: none;">
+                                                        <i
+                                                            class="bi bi-cloud-arrow-up text-primary-orange display-5 mb-3"></i>
+                                                        <h6 class="fw-bold text-dark mb-2">Klik atau Seret File ke Sini
+                                                        </h6>
+                                                        <p class="text-muted mb-0 small">Format MP4, MOV, atau AVI
+                                                            (Maks.
+                                                            50MB)
+                                                        </p>
+                                                    </div>
+                                                </div>
+
+                                                <div id="videoPreview" class="mt-4" style="display: none;">
+                                                    <div
+                                                        class="d-flex align-items-center bg-light p-3 rounded-3 border">
+                                                        <i
+                                                            class="bi bi-file-earmark-play-fill text-primary-orange fs-3 me-3"></i>
+                                                        <div class="flex-grow-1">
+                                                            <span id="fileName"
+                                                                class="fw-semibold text-dark d-block text-truncate"
+                                                                style="max-width: 250px;"></span>
+                                                            <small id="fileSize" class="text-muted"></small>
+                                                        </div>
+                                                        <button type="button"
+                                                            class="btn btn-sm btn-outline-danger shadow-none"
+                                                            id="removeFileButton">
+                                                            <i class="bi bi-x-lg"></i>
+                                                        </button>
+                                                    </div>
+                                                    <video id="videoPlayer" class="w-100 mt-3 rounded shadow-sm"
+                                                        controls
+                                                        style="max-height: 250px; display: none; object-fit: cover;"></video>
+
+                                                    <button id="uploadButton"
+                                                        class="btn btn-primary-orange w-100 mt-3 py-2 shadow-none"
+                                                        disabled>
+                                                        <i class="bi bi-upload me-2"></i>Mulai Unggah
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col-12">
+                                        <label
+                                            class="form-label fw-semibold text-muted small mt-3 text-uppercase">Judul</label>
+                                        <div class="input-group input-group-merge border rounded-3">
+                                            <span class="input-group-text border-0 bg-transparent"><i
+                                                    class="bi bi-search text-muted"></i></span>
+                                            <input type="text" class="form-control border-0 shadow-none ps-0"
+                                                placeholder="Ketik nama AC...">
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <label
+                                            class="form-label fw-semibold text-muted small mt-3 text-uppercase">Deskripsi</label>
+
+                                        <div
+                                            class="input-group input-group-merge border rounded-3 overflow-hidden custom-textarea-group">
+                                            <span class="input-group-text border-0 bg-transparent px-3">
+                                                <i class="bi bi-pencil-square text-muted fs-5"></i>
+                                            </span>
+                                            <textarea class="form-control border-0 shadow-none py-3" id="catatanTeknis"
+                                                rows="4"
+                                                placeholder="Tuliskan detail pengecekan atau keluhan pelanggan di sini..."
+                                                style="resize: none;"></textarea>
+                                        </div>
+
+                                        <div class="form-text text-end mt-2">
+                                            <small class="bg-light px-2 py-1 rounded border">
+                                                <span id="charCount" class="fw-bold text-primary-orange">0</span> / 500
+                                                <span class="text-muted">Karakter</span>
+                                            </small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- Row Video -->
-            <div class="row mt-4">
-                <iframe style="height: 500px;" class="cms-preview" scrolling="no"
-                    src="http://localhost/ariatek/#video"></iframe>
-            </div>
+            <!-- Row RTS 3 -->
             <div class="row">
-                <div class="mb-3">
-                    <label class="form-label fw-bold small text-muted text-uppercase">Deskripsi Laporan / Catatan
-                        Teknisi</label>
-                    <div id="editor-container">
-                        <div class="editor" id="editor">
-                            <p>Tulis detail pengecekan AC di sini...</p>
+                <div class="card border-0 shadow-sm mb-3">
+                    <div class="card-header bg-transparent border-0 py-3" data-bs-toggle="collapse"
+                        href="#collapsevideo" role="button" aria-expanded="false" style="cursor: pointer;">
+
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center">
+                                <div class="bg-label-orange p-2 rounded me-3">
+                                    <i class="bi bi-3-square text-primary-orange"></i>
+                                </div>
+                                <h6 class="m-0 fw-bold">Content RTS 3</h6>
+                            </div>
+                            <i class="bi bi-chevron-right arrow-icon transition-all text-muted"></i>
+                        </div>
+                    </div>
+
+                    <div class="collapse" id="collapsevideo">
+                        <div class="card-body pt-0 border-top-0">
+                            <div class="p-3 bg-light rounded-3">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <label
+                                            class="form-label fw-semibold text-muted small text-uppercase">Judul</label>
+                                        <div class="input-group input-group-merge border rounded-3">
+                                            <span class="input-group-text border-0 bg-transparent"><i
+                                                    class="bi bi-type-h1 text-muted"></i></span>
+                                            <input type="text" class="form-control border-0 shadow-none"
+                                                placeholder="Ketik nama AC...">
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <label
+                                            class="form-label fw-semibold text-muted small mt-3 text-uppercase">Deskripsi</label>
+
+                                        <div
+                                            class="input-group input-group-merge border rounded-3 overflow-hidden custom-textarea-group">
+                                            <span class="input-group-text border-0 bg-transparent px-3">
+                                                <i class="bi bi-pencil-square text-muted fs-5"></i>
+                                            </span>
+                                            <textarea class="form-control border-0 shadow-none py-3" id="catatanTeknis"
+                                                rows="4"
+                                                placeholder="Tuliskan detail pengecekan atau keluhan pelanggan di sini..."
+                                                style="resize: none;"></textarea>
+                                        </div>
+
+                                        <div class="form-text text-end mt-2">
+                                            <small class="bg-light px-2 py-1 rounded border">
+                                                <span id="charCount" class="fw-bold text-primary-orange">0</span> / 500
+                                                <span class="text-muted">Karakter</span>
+                                            </small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-4">
+                                        <label
+                                            class="form-label fw-semibold text-muted small text-uppercase">Judul</label>
+                                        <div class="input-group input-group-merge border rounded-3">
+                                            <span class="input-group-text border-0 bg-transparent"><i
+                                                    class="bi bi-type-h1 text-muted"></i></span>
+                                            <input type="text" class="form-control border-0 shadow-none"
+                                                placeholder="Ketik nama AC...">
+                                        </div>
+                                        <label
+                                            class="form-label fw-semibold text-muted small mt-3 text-uppercase">Deskripsi</label>
+
+                                        <div
+                                            class="input-group input-group-merge border rounded-3 overflow-hidden custom-textarea-group">
+                                            <span class="input-group-text border-0 bg-transparent px-3">
+                                                <i class="bi bi-pencil-square text-muted fs-5"></i>
+                                            </span>
+                                            <textarea class="form-control border-0 shadow-none py-3" id="catatanTeknis"
+                                                rows="4"
+                                                placeholder="Tuliskan detail pengecekan atau keluhan pelanggan di sini..."
+                                                style="resize: none;"></textarea>
+                                        </div>
+
+                                        <div class="form-text text-end mt-2">
+                                            <small class="bg-light px-2 py-1 rounded border">
+                                                <span id="charCount" class="fw-bold text-primary-orange">0</span> / 500
+                                                <span class="text-muted">Karakter</span>
+                                            </small>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <label
+                                            class="form-label fw-semibold text-muted small text-uppercase">Judul</label>
+                                        <div class="input-group input-group-merge border rounded-3">
+                                            <span class="input-group-text border-0 bg-transparent"><i
+                                                    class="bi bi-type-h1 text-muted"></i></span>
+                                            <input type="text" class="form-control border-0 shadow-none"
+                                                placeholder="Ketik nama AC...">
+                                        </div>
+                                        <label
+                                            class="form-label fw-semibold text-muted small mt-3 text-uppercase">Deskripsi</label>
+
+                                        <div
+                                            class="input-group input-group-merge border rounded-3 overflow-hidden custom-textarea-group">
+                                            <span class="input-group-text border-0 bg-transparent px-3">
+                                                <i class="bi bi-pencil-square text-muted fs-5"></i>
+                                            </span>
+                                            <textarea class="form-control border-0 shadow-none py-3" id="catatanTeknis"
+                                                rows="4"
+                                                placeholder="Tuliskan detail pengecekan atau keluhan pelanggan di sini..."
+                                                style="resize: none;"></textarea>
+                                        </div>
+
+                                        <div class="form-text text-end mt-2">
+                                            <small class="bg-light px-2 py-1 rounded border">
+                                                <span id="charCount" class="fw-bold text-primary-orange">0</span> / 500
+                                                <span class="text-muted">Karakter</span>
+                                            </small>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <label
+                                            class="form-label fw-semibold text-muted small text-uppercase">Judul</label>
+                                        <div class="input-group input-group-merge border rounded-3">
+                                            <span class="input-group-text border-0 bg-transparent"><i
+                                                    class="bi bi-type-h1 text-muted"></i></span>
+                                            <input type="text" class="form-control border-0 shadow-none"
+                                                placeholder="Ketik nama AC...">
+                                        </div>
+                                        <label
+                                            class="form-label fw-semibold text-muted small mt-3 text-uppercase">Deskripsi</label>
+
+                                        <div
+                                            class="input-group input-group-merge border rounded-3 overflow-hidden custom-textarea-group">
+                                            <span class="input-group-text border-0 bg-transparent px-3">
+                                                <i class="bi bi-pencil-square text-muted fs-5"></i>
+                                            </span>
+                                            <textarea class="form-control border-0 shadow-none py-3" id="catatanTeknis"
+                                                rows="4"
+                                                placeholder="Tuliskan detail pengecekan atau keluhan pelanggan di sini..."
+                                                style="resize: none;"></textarea>
+                                        </div>
+
+                                        <div class="form-text text-end mt-2">
+                                            <small class="bg-light px-2 py-1 rounded border">
+                                                <span id="charCount" class="fw-bold text-primary-orange">0</span> / 500
+                                                <span class="text-muted">Karakter</span>
+                                            </small>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <label
+                                            class="form-label fw-semibold text-muted small text-uppercase">Judul</label>
+                                        <div class="input-group input-group-merge border rounded-3">
+                                            <span class="input-group-text border-0 bg-transparent"><i
+                                                    class="bi bi-type-h1 text-muted"></i></span>
+                                            <input type="text" class="form-control border-0 shadow-none"
+                                                placeholder="Ketik nama AC...">
+                                        </div>
+                                        <label
+                                            class="form-label fw-semibold text-muted small mt-3 text-uppercase">Deskripsi</label>
+
+                                        <div
+                                            class="input-group input-group-merge border rounded-3 overflow-hidden custom-textarea-group">
+                                            <span class="input-group-text border-0 bg-transparent px-3">
+                                                <i class="bi bi-pencil-square text-muted fs-5"></i>
+                                            </span>
+                                            <textarea class="form-control border-0 shadow-none py-3" id="catatanTeknis"
+                                                rows="4"
+                                                placeholder="Tuliskan detail pengecekan atau keluhan pelanggan di sini..."
+                                                style="resize: none;"></textarea>
+                                        </div>
+
+                                        <div class="form-text text-end mt-2">
+                                            <small class="bg-light px-2 py-1 rounded border">
+                                                <span id="charCount" class="fw-bold text-primary-orange">0</span> / 500
+                                                <span class="text-muted">Karakter</span>
+                                            </small>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <label
+                                            class="form-label fw-semibold text-muted small text-uppercase">Judul</label>
+                                        <div class="input-group input-group-merge border rounded-3">
+                                            <span class="input-group-text border-0 bg-transparent"><i
+                                                    class="bi bi-type-h1 text-muted"></i></span>
+                                            <input type="text" class="form-control border-0 shadow-none"
+                                                placeholder="Ketik nama AC...">
+                                        </div>
+                                        <label
+                                            class="form-label fw-semibold text-muted small mt-3 text-uppercase">Deskripsi</label>
+
+                                        <div
+                                            class="input-group input-group-merge border rounded-3 overflow-hidden custom-textarea-group">
+                                            <span class="input-group-text border-0 bg-transparent px-3">
+                                                <i class="bi bi-pencil-square text-muted fs-5"></i>
+                                            </span>
+                                            <textarea class="form-control border-0 shadow-none py-3" id="catatanTeknis"
+                                                rows="4"
+                                                placeholder="Tuliskan detail pengecekan atau keluhan pelanggan di sini..."
+                                                style="resize: none;"></textarea>
+                                        </div>
+
+                                        <div class="form-text text-end mt-2">
+                                            <small class="bg-light px-2 py-1 rounded border">
+                                                <span id="charCount" class="fw-bold text-primary-orange">0</span> / 500
+                                                <span class="text-muted">Karakter</span>
+                                            </small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Row RTS 4 -->
+            <div class="row">
+                <div class="card border-0 shadow-sm mb-3">
+                    <div class="card-header bg-transparent border-0 py-3" data-bs-toggle="collapse" href="#collapseRTS4"
+                        role="button" aria-expanded="false" style="cursor: pointer;">
+
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center">
+                                <div class="bg-label-orange p-2 rounded me-3">
+                                    <i class="bi bi-4-square text-primary-orange"></i>
+                                </div>
+                                <h6 class="m-0 fw-bold">Content RTS 4</h6>
+                            </div>
+                            <i class="bi bi-chevron-right arrow-icon transition-all text-muted"></i>
+                        </div>
+                    </div>
+
+                    <div class="collapse" id="collapseRTS4">
+                        <div class="card-body pt-0 border-top-0">
+                            <div class="p-3 bg-light rounded-3">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <label class="form-label fw-semibold text-muted small text-uppercase">Judul
+                                            1</label>
+                                        <div class="input-group input-group-merge border rounded-3">
+                                            <span class="input-group-text border-0 bg-transparent"><i
+                                                    class="bi bi-type-h1 text-muted"></i></span>
+                                            <input type="text" class="form-control border-0 shadow-none"
+                                                placeholder="Masukan judul...">
+                                        </div>
+                                        <label
+                                            class="form-label fw-semibold text-muted small text-uppercase mt-3">Persentase
+                                            1</label>
+                                        <div class="input-group input-group-merge border rounded-3">
+                                            <span class="input-group-text border-0 bg-transparent"><i
+                                                    class="bi bi-type-h2 text-muted"></i></span>
+                                            <input type="text" class="form-control border-0 shadow-none"
+                                                placeholder="Masukan nilai...">
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <label class="form-label fw-semibold text-muted small text-uppercase">Judul
+                                            2</label>
+                                        <div class="input-group input-group-merge border rounded-3">
+                                            <span class="input-group-text border-0 bg-transparent"><i
+                                                    class="bi bi-type-h1 text-muted"></i></span>
+                                            <input type="text" class="form-control border-0 shadow-none"
+                                                placeholder="Masukan judul...">
+                                        </div>
+                                        <label
+                                            class="form-label fw-semibold text-muted small text-uppercase mt-3">Persentase
+                                            2</label>
+                                        <div class="input-group input-group-merge border rounded-3">
+                                            <span class="input-group-text border-0 bg-transparent"><i
+                                                    class="bi bi-type-h2 text-muted"></i></span>
+                                            <input type="text" class="form-control border-0 shadow-none"
+                                                placeholder="Masukan nilai...">
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <label class="form-label fw-semibold text-muted small text-uppercase">Judul
+                                            3</label>
+                                        <div class="input-group input-group-merge border rounded-3">
+                                            <span class="input-group-text border-0 bg-transparent"><i
+                                                    class="bi bi-type-h1 text-muted"></i></span>
+                                            <input type="text" class="form-control border-0 shadow-none"
+                                                placeholder="Masukan judul...">
+                                        </div>
+                                        <label
+                                            class="form-label fw-semibold text-muted small text-uppercase mt-3">Persentase
+                                            3</label>
+                                        <div class="input-group input-group-merge border rounded-3">
+                                            <span class="input-group-text border-0 bg-transparent"><i
+                                                    class="bi bi-type-h2 text-muted"></i></span>
+                                            <input type="text" class="form-control border-0 shadow-none"
+                                                placeholder="Masukan nilai...">
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <label class="form-label fw-semibold text-muted small text-uppercase">Judul
+                                            4</label>
+                                        <div class="input-group input-group-merge border rounded-3">
+                                            <span class="input-group-text border-0 bg-transparent"><i
+                                                    class="bi bi-type-h1 text-muted"></i></span>
+                                            <input type="text" class="form-control border-0 shadow-none"
+                                                placeholder="Masukan judul...">
+                                        </div>
+                                        <label
+                                            class="form-label fw-semibold text-muted small text-uppercase mt-3">Persentase
+                                            4</label>
+                                        <div class="input-group input-group-merge border rounded-3">
+                                            <span class="input-group-text border-0 bg-transparent"><i
+                                                    class="bi bi-type-h2 text-muted"></i></span>
+                                            <input type="text" class="form-control border-0 shadow-none"
+                                                placeholder="Masukan nilai...">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Row RTS 5 -->
+            <div class="row">
+                <div class="card border-0 shadow-sm mb-3">
+                    <div class="card-header bg-transparent border-0 py-3" data-bs-toggle="collapse" href="#collapseRTS5"
+                        role="button" aria-expanded="false" style="cursor: pointer;">
+
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center">
+                                <div class="bg-label-orange p-2 rounded me-3">
+                                    <i class="bi bi-5-square text-primary-orange"></i>
+                                </div>
+                                <h6 class="m-0 fw-bold">Content RTS 5</h6>
+                            </div>
+                            <i class="bi bi-chevron-right arrow-icon transition-all text-muted"></i>
+                        </div>
+                    </div>
+
+                    <div class="collapse" id="collapseRTS5">
+                        <div class="card-body pt-0 border-top-0">
+                            <div class="p-3 bg-light rounded-3">
+                                <div class="row" id="dom">
+                                    <div id="card-product" class="col-md-4 col-lg-3 mb-4">
+                                        <div class="card card-product border-0 shadow-sm h-100">
+                                            <div class="product-img-wrapper position-relative">
+                                                <div class="product-badge">
+                                                    <span class="badge bg-label-orange">Hemat Energi</span>
+                                                </div>
+
+                                                <div class="position-absolute top-0 end-0 m-2" style="z-index: 2;">
+                                                    <div class="dropdown">
+                                                        <button
+                                                            class="btn btn-icon btn-light btn-sm shadow-sm rounded-circle p-1"
+                                                            type="button" data-bs-toggle="dropdown"
+                                                            aria-expanded="false">
+                                                            <i class="bi bi-three-dots-vertical"></i>
+                                                        </button>
+                                                        <ul
+                                                            class="dropdown-menu dropdown-menu-end shadow border-0 mt-2">
+                                                            <li>
+                                                                <a class="dropdown-item text-danger d-flex align-items-center"
+                                                                    href="#">
+                                                                    <i class="bi bi-dash-circle-fill me-2"></i>Jangan
+                                                                    tampilkan
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a class="dropdown-item d-flex align-items-center"
+                                                                    href="#">
+                                                                    <i class="bi bi-pencil me-2"></i> Edit Data
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+
+                                                <div class="img-container">
+                                                    <img src="https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?auto=format&fit=crop&q=80&w=400"
+                                                        alt="AC Unit" class="w-100">
+                                                </div>
+                                            </div>
+
+                                            <div class="card-body p-3">
+                                                <div class="d-flex justify-content-between mb-1">
+                                                    <small class="text-muted">Inverter</small>
+                                                    <small class="text-warning"><i class="bi bi-star-fill"></i>
+                                                        4.8</small>
+                                                </div>
+                                                <h6 class="fw-bold mb-2 text-dark">Daikin Inverter 1/2 PK</h6>
+                                                <div class="product-price mb-3">
+                                                    <span class="text-primary-orange fw-bold fs-5">Rp4.250.000</span>
+                                                    <small
+                                                        class="text-muted text-decoration-line-through ms-1">Rp4.8jt</small>
+                                                </div>
+                                                <button class="btn btn-primary-orange w-100 py-2">
+                                                    <i class="bi bi-cart-plus me-1"></i> Tambahkan
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Row RTS 6 -->
+            <div class="row">
+                <div class="card border-0 shadow-sm mb-3">
+                    <div class="card-header bg-transparent border-0 py-3" data-bs-toggle="collapse" href="#collapseRTS6"
+                        role="button" aria-expanded="false" style="cursor: pointer;">
+
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center">
+                                <div class="bg-label-orange p-2 rounded me-3">
+                                    <i class="bi bi-6-square text-primary-orange"></i>
+                                </div>
+                                <h6 class="m-0 fw-bold">Content RTS 6</h6>
+                            </div>
+                            <i class="bi bi-chevron-right arrow-icon transition-all text-muted"></i>
+                        </div>
+                    </div>
+
+                    <div class="collapse" id="collapseRTS6">
+                        <div class="card-body pt-0 border-top-0">
+                            <div class="p-3 bg-light rounded-3">
+                                <div class="row" id="dom2">
+                                    <div id="card-product" class="col-md-4 col-lg-3 mb-4">
+                                        <div class="card card-product border-0 shadow-sm h-100">
+                                            <div class="product-img-wrapper position-relative">
+                                                <div class="product-badge">
+                                                    <span class="badge bg-label-orange">Hemat Energi</span>
+                                                </div>
+
+                                                <div class="position-absolute top-0 end-0 m-2" style="z-index: 2;">
+                                                    <div class="dropdown">
+                                                        <button
+                                                            class="btn btn-icon btn-light btn-sm shadow-sm rounded-circle p-1"
+                                                            type="button" data-bs-toggle="dropdown"
+                                                            aria-expanded="false">
+                                                            <i class="bi bi-three-dots-vertical"></i>
+                                                        </button>
+                                                        <ul
+                                                            class="dropdown-menu dropdown-menu-end shadow border-0 mt-2">
+                                                            <li>
+                                                                <a class="dropdown-item text-danger d-flex align-items-center"
+                                                                    href="#">
+                                                                    <i class="bi bi-dash-circle-fill me-2"></i>Jangan
+                                                                    tampilkan
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a class="dropdown-item d-flex align-items-center"
+                                                                    href="#">
+                                                                    <i class="bi bi-pencil me-2"></i> Edit Data
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+
+                                                <div class="img-container">
+                                                    <img src="https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?auto=format&fit=crop&q=80&w=400"
+                                                        alt="AC Unit" class="w-100">
+                                                </div>
+                                            </div>
+
+                                            <div class="card-body p-3">
+                                                <div class="d-flex justify-content-between mb-1">
+                                                    <small class="text-muted">Inverter</small>
+                                                    <small class="text-warning"><i class="bi bi-star-fill"></i>
+                                                        4.8</small>
+                                                </div>
+                                                <h6 class="fw-bold mb-2 text-dark">Daikin Inverter 1/2 PK</h6>
+                                                <div class="product-price mb-3">
+                                                    <span class="text-primary-orange fw-bold fs-5">Rp4.250.000</span>
+                                                    <small
+                                                        class="text-muted text-decoration-line-through ms-1">Rp4.8jt</small>
+                                                </div>
+                                                <button class="btn btn-primary-orange w-100 py-2">
+                                                    <i class="bi bi-cart-plus me-1"></i> Tambahkan
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -199,8 +928,22 @@
         </div>
     </main>
 
-    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const template = document.getElementById('card-product');
+        const container = document.getElementById('dom');
+        const container2 = document.getElementById('dom2');
+
+        for (let i = 0; i < 10; i++) {
+            const clone = template.cloneNode(true);
+
+            container.appendChild(clone);
+            container2.appendChild(clone)
+        }
+    </script>
+
     <script src="https://cdn.ckeditor.com/ckeditor5/40.0.0/classic/ckeditor.js"></script>
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/dropvideo.js"></script>
     <script src="../assets/js/script.js"></script>
 </body>
 

@@ -1,10 +1,8 @@
-/* --- 1. VARIABLES & BASE --- */
 :root {
     --primary-orange: #ff3e1d;
     --primary-orange-hover: #e6381a;
     --primary-orange-gradient: linear-gradient(135deg, #ff8c00, #ff3e1d);
     --light-orange: #fff3e0;
-    /* Standardized to the warmer orange */
     --success-light: #e8fadf;
     --success-text: #71dd37;
     --warning-light: #fff2e2;
@@ -16,7 +14,6 @@
     --font-main: 'Public Sans', sans-serif;
     --transition: all 0.3s ease;
 
-    /* Shadows */
     --shadow-sm: 0 0.125rem 0.375rem 0 rgba(161, 172, 184, 0.12);
     --shadow-md: 0 2px 6px 0 rgba(67, 89, 113, 0.12);
     --shadow-focus: 0 0 0 0.25rem rgba(255, 62, 29, 0.1);
@@ -29,7 +26,6 @@ body {
     overflow-x: hidden;
 }
 
-/* --- 2. SIDEBAR LAYOUT --- */
 #sidebar {
     width: 260px;
     height: calc(100vh - 2rem);
@@ -64,7 +60,6 @@ body {
     margin-right: 10px;
 }
 
-/* --- 3. NAVIGATION & SUB-MENU --- */
 .nav-link {
     margin: 0.2rem 1rem;
     padding: 0.625rem 1rem;
@@ -93,7 +88,6 @@ body {
     font-weight: 600;
 }
 
-/* Sub-Menu */
 .sub-menu {
     padding-left: 3rem !important;
 }
@@ -120,16 +114,17 @@ body {
     background-color: var(--primary-orange);
 }
 
-.menu-toggle[aria-expanded="true"] .arrow-icon {
+[aria-expanded="true"] .arrow-icon {
     transform: rotate(90deg);
 }
 
 .arrow-icon {
     font-size: 0.75rem;
     transition: var(--transition);
+    display: inline-block;
+    /* Required for transform to work */
 }
 
-/* --- 4. MAIN CONTENT & NAVBAR --- */
 #content {
     margin-left: 280px;
     padding: 1rem 2rem 1rem 1rem;
@@ -145,13 +140,16 @@ body {
     margin-bottom: 1.5rem;
 }
 
+.input-navbar {
+    min-width: 50vw;
+}
+
 .container-p-y {
     padding: 1.625rem 1.5rem !important;
     max-width: 1440px;
     margin: 0 auto;
 }
 
-/* Breadcrumb */
 .breadcrumb {
     display: flex;
     align-items: center;
@@ -163,8 +161,6 @@ body {
     margin-top: 2px;
 }
 
-/* --- 5. COMPONENTS & UI --- */
-/* Cards */
 .card-custom {
     border: none;
     border-radius: 0.5rem;
@@ -185,7 +181,6 @@ body {
     justify-content: center;
 }
 
-/* Badges */
 .bg-label-orange {
     background-color: var(--light-orange) !important;
     color: var(--primary-orange) !important;
@@ -201,11 +196,9 @@ body {
     color: var(--warning-text) !important;
 }
 
-/* Buttons */
 .btn-primary-orange {
     background: var(--primary-orange-gradient);
     border: none;
-    /* Consolidated border style */
     color: white;
     font-weight: 600;
     transition: var(--transition);
@@ -213,7 +206,6 @@ body {
 
 .btn-primary-orange:hover {
     background: var(--primary-orange-hover);
-    /* Fallback/Solid color on hover */
     box-shadow: 0 0.125rem 0.25rem rgba(255, 62, 29, 0.4);
     color: white;
     filter: brightness(1.1);
@@ -232,7 +224,6 @@ body {
     color: white;
 }
 
-/* Inputs & Forms */
 .custom-input {
     border: 1px solid #d9dee3;
     padding: 0.6rem 0.875rem;
@@ -270,7 +261,6 @@ input[type="file"]::file-selector-button {
     border-color: var(--primary-orange);
 }
 
-/* Search Modal */
 .search-result-item {
     transition: all 0.2s ease;
     border: 1px solid transparent;
@@ -291,7 +281,6 @@ input[type="file"]::file-selector-button {
     transform: translateY(0);
 }
 
-/* --- 6. TABLES --- */
 .table thead th {
     background-color: #f8f9fa;
     color: var(--text-muted);
@@ -304,7 +293,6 @@ input[type="file"]::file-selector-button {
     vertical-align: middle;
 }
 
-/* --- 7. PAGINATION --- */
 .page-link {
     border: none;
     border-radius: 0.375rem !important;
@@ -325,8 +313,6 @@ input[type="file"]::file-selector-button {
     color: var(--primary-orange);
 }
 
-/* --- 8. PRODUCT & SPECIFIC STYLES --- */
-/* Product Card */
 .card-product {
     overflow: hidden;
     border: none;
@@ -363,19 +349,16 @@ input[type="file"]::file-selector-button {
     z-index: 2;
 }
 
-/* Detail Product */
 .img-thumbnail.border-orange {
     border-color: var(--primary-orange) !important;
     border-width: 2px;
 }
 
 .nav-tabs .nav-link.active {
-    /* Overriding generic nav-link active for tabs if needed, or keeping standard */
     color: var(--primary-orange) !important;
     border-bottom: 3px solid var(--primary-orange) !important;
     font-weight: bold;
     background-color: transparent !important;
-    /* Reset background for tabs */
 }
 
 .product-image-main img {
@@ -386,7 +369,6 @@ input[type="file"]::file-selector-button {
     transform: scale(1.05);
 }
 
-/* Category Navigation */
 .category-link {
     color: var(--text-dark);
     padding: 0.6rem 0.8rem;
@@ -400,12 +382,10 @@ input[type="file"]::file-selector-button {
     color: var(--primary-orange);
 }
 
-/* Auth / Helper Text */
 .text-primary-orange {
     color: var(--primary-orange) !important;
 }
 
-/* WYSIWYG Editor */
 .ck-editor__titled {
     border-color: var(--primary-orange) !important;
 }
@@ -426,7 +406,137 @@ input[type="file"]::file-selector-button {
     background-color: #f8f9fa !important;
 }
 
-/* --- 9. RESPONSIVE --- */
+.btn-link {
+    color: #566a7f;
+}
+
+
+
+.collapsing {
+    transition: height 0.35s ease !important;
+}
+
+.dropzone {
+    border: 2px dashed #d9dee3;
+    background-color: #f8f9fa;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    transition: all 0.25s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropzone:hover {
+    border-color: var(--primary-orange);
+    background-color: var(--light-orange);
+}
+
+.dropzone.dragover {
+    border-style: solid;
+    border-color: var(--primary-orange) !important;
+    background-color: var(--light-orange) !important;
+    box-shadow: 0 0 0 0.25rem rgba(255, 62, 29, 0.15);
+}
+
+.dz-message {
+    transition: transform 0.2s ease;
+}
+
+.dropzone:hover .dz-message {
+    transform: translateY(-2px);
+}
+
+.dropzone i {
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropzone:hover i {
+    transform: scale(1.1);
+}
+
+.dz-message * {
+    pointer-events: none;
+}
+
+#videoPlayer {
+    border: 1px solid #d9dee3;
+    background: #000;
+}
+
+/* Pastikan group pembungkus memiliki alignment yang baik */
+.custom-textarea-group {
+    align-items: flex-start;
+    /* Menjaga ikon tetap di atas tapi sejajar baris pertama */
+}
+
+.custom-textarea-group .input-group-text {
+    height: 54px;
+    /* Menyesuaikan dengan tinggi baris pertama textarea agar ikon center secara vertikal di baris awal */
+    display: flex;
+    align-items: center;
+}
+
+/* Styling TextArea Fokus */
+.input-group-merge:focus-within {
+    border-color: var(--primary-orange) !important;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(255, 62, 29, 0.08);
+    /* Shadow lebih lembut saat fokus */
+}
+
+/* Padding dalam textarea agar tidak mepet */
+.form-control#catatanTeknis {
+    padding-right: 15px;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.form-control::placeholder {
+    font-size: 0.9rem;
+    color: #b4bdc6;
+}
+
+/* Transisi halus */
+.input-group-merge {
+    transition: border-color 0.2s, box-shadow 0.2s, background-color 0.2s;
+    background-color: #f9f9f9;
+    /* Warna dasar sedikit abu agar terlihat "dalam" */
+}
+
+.btn-icon {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.9) !important;
+    border: none;
+    transition: all 0.2s ease;
+}
+
+.btn-icon:hover {
+    background-color: #fff !important;
+    transform: scale(1.1);
+    color: var(--primary-orange);
+}
+
+.dropdown-menu {
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.dropdown-item:hover {
+    background-color: var(--light-orange);
+}
+
+.dropdown-item.text-danger:hover {
+    background-color: #ffe0db;
+}
+
 @media (max-width: 992px) {
     #sidebar {
         left: -300px;

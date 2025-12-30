@@ -19,14 +19,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- 2. Logika CKEditor ---
     const initEditor = () => {
-        const editorElement = document.querySelectorAll('.editor');
-
-        if (editorElement) {
+        document.querySelectorAll('.editor').forEach(el => {
             ClassicEditor
-                .create(editorElement, {
+                .create(el, {
                     toolbar: [
                         'heading', '|',
-                        'bold', 'italic', 'link', 'bulletedList', 'numberedList', '|',
+                        'bold', 'italic', 'link',
+                        'bulletedList', 'numberedList', '|',
                         'outdent', 'indent', '|',
                         'undo', 'redo'
                     ]
@@ -37,10 +36,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 .catch(error => {
                     console.error('Gagal memuat CKEditor:', error);
                 });
-        }
+        });
     };
 
-    // Jalankan semua fungsi inisialisasi
     initSidebar();
     initEditor();
 });

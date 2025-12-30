@@ -20,6 +20,7 @@
   "homepage": "https://github.com/TegarSubagdja/HTML_Dashboard-UI#readme",
   "dependencies": {
     "bootstrap": "^5.3.8",
-    "bootstrap-icons": "^1.13.1"
+    "bootstrap-icons": "^1.13.1",
+    "puppeteer": "^24.34.0"
   }
 }
