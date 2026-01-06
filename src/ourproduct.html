@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Orange Dashboard - Sneat Style</title>
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23ff3e1d'/><text y='50%' x='50%' dominant-baseline='central' text-anchor='middle' font-size='70' fill='white'>A</text></svg>">
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/font/bootstrap-icons.css ">
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+
+    <aside id="sidebar">
+        <div class="brand-logo text-uppercase">
+            <img class="img-sidebard" src="../assets/img/ariatek.svg" alt="">
+        </div>
+
+        <div class="mt-2 overflow-auto sidebar-scroll">
+            <small class="text-muted fw-bold px-4 mb-2 d-block" style="font-size: 0.7rem;">MAIN MENU</small>
+
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="bi bi-grid-1x2-fill"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="bi bi-house-door"></i>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link menu-toggle" aria-expanded="false" data-bs-toggle="collapse" href="#whyAriatek"
+                        role="button">
+                        <i class="bi bi-patch-question"></i>
+                        <span>Why Ariatek</span>
+                        <i class="bi bi-chevron-right ms-auto arrow-icon"></i>
+                    </a>
+                    <div class="collapse" id="whyAriatek">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item"><a class="nav-link" href="#">Who is Ariatek</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Vision and Mission</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link menu-toggle active" data-bs-toggle="collapse" aria-expanded="true"
+                        href="#ourProduct" role="button">
+                        <i class="bi bi-box-seam"></i>
+                        <span>Our Product</span>
+                        <i class="bi bi-chevron-right ms-auto arrow-icon"></i>
+                    </a>
+                    <div class="collapse show" id="ourProduct">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item"><a class="nav-link" href="#">Automation</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Robotics</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Internet Of Things</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Internet Of Things</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Artificial Intelligence</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Technology</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link menu-toggle" data-bs-toggle="collapse" href="#ourService" role="button">
+                        <i class="bi bi-building-gear"></i>
+                        <span>Our Service</span>
+                        <i class="bi bi-chevron-right ms-auto arrow-icon"></i>
+                    </a>
+                    <div class="collapse" id="ourService">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item"><a class="nav-link" href="#">LMS Ariatek</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Certification</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Collaboration</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Seminar</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link menu-toggle" data-bs-toggle="collapse" href="#contact" role="button">
+                        <i class="bi bi-envelope"></i>
+                        <span>Contact</span>
+                        <i class="bi bi-chevron-right ms-auto arrow-icon"></i>
+                    </a>
+                    <div class="collapse" id="contact">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item"><a class="nav-link" href="#">List Distribution</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Service Center</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Our Customer</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+
+            <small class="text-muted fw-bold px-4 mt-4 mb-2 d-block" style="font-size: 0.7rem;">REPORTS</small>
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a href="#" class="nav-link"><i class="bi bi-file-earmark-bar-graph"></i> Cost History</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link"><i class="bi bi-gear"></i> Settings</a>
+                </li>
+            </ul>
+        </div>
+    </aside>
+
+    <main id="content">
+        <nav class="navbar navbar-expand navbar-floating z-3">
+            <div class="container-fluid px-0">
+                <button class="btn btn-link d-lg-none me-2" id="sidebarToggle">
+                    <i class="bi bi-list fs-3 text-dark"></i>
+                </button>
+
+                <div class="search-box d-none d-md-flex">
+                    <i class="bi bi-search text-muted me-2"></i>
+                    <input type="text" name="nav_search" aria-label="Search Data"
+                        class="border-0 bg-transparent input-navbar" placeholder="Search data..."
+                        style="outline: none;">
+                </div>
+
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item me-3">
+                        <i class="bi bi-bell fs-5 text-muted"></i>
+                        </a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle p-0 d-flex align-items-center" href="#"
+                            data-bs-toggle="dropdown">
+                            <img src="https://ui-avatars.com/api/?name=Admin+User&background=ff3e1d&color=fff"
+                                class="rounded-circle" width="38">
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+                            <li><a class="dropdown-item" href="#">My Profile</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item text-danger" href="#">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="container">
+            <!-- Row RTS 1 -->
+            <div class="row">
+                <div class="card border-0 shadow-sm mb-3">
+                    <div class="card-header bg-transparent border-0 py-3" data-bs-toggle="collapse"
+                        href="#collapseBanner" role="button" aria-expanded="true" style="cursor: pointer;">
+
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center">
+                                <div class="bg-label-orange p-2 rounded me-3">
+                                    <i class="bi bi-1-square text-primary-orange"></i>
+                                </div>
+                                <h6 class="m-0 fw-bold">Content RTS 1 (Visi dan Misi)</h6>
+                            </div>
+                            <i class="bi bi-chevron-right arrow-icon transition-all text-muted"></i>
+                        </div>
+                    </div>
+
+                    <div class="collapse show" id="collapseBanner">
+                        <div class="card-body pt-0 border-top-0">
+                            <div class="p-3 bg-light rounded-3">
+                                <div class="table-card">
+
+                                    <div class="header-toolbar">
+                                        <div class="controls-left">
+                                            <div class="length-control">
+                                                <select id="customLengthInput">
+                                                    <option value="5">5</option>
+                                                    <option value="10" selected>10</option>
+                                                    <option value="25">25</option>
+                                                    <option value="50">50</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="search-control">
+                                                <i class='bx bx-search'></i>
+                                                <input type="text" id="customSearchInput" class="form-control"
+                                                    placeholder="Cari data...">
+                                            </div>
+                                        </div>
+
+                                        <div class="d-flex gap-2">
+                                            <div class="dropdown">
+                                                <button class="btn btn-export-pill dropdown-toggle shadow-none"
+                                                    data-bs-toggle="dropdown">
+                                                    <i class='bx bx-export me-1'></i> Export
+                                                </button>
+                                                <ul class="dropdown-menu dropdown-menu-end shadow-sm border-0">
+                                                    <li><a class="dropdown-item py-2" href="javascript:void(0);"
+                                                            id="btn-print"><i class='bx bx-printer me-2'></i> Print</a>
+                                                    </li>
+                                                    <li><a class="dropdown-item py-2" href="javascript:void(0);"
+                                                            id="btn-excel"><i class='bx bx-file me-2'></i> Excel</a>
+                                                    </li>
+                                                    <li><a class="dropdown-item py-2" href="javascript:void(0);"
+                                                            id="btn-pdf"><i class='bx bxs-file-pdf me-2'></i> PDF</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                            <button class="btn-add">
+                                                <i class='bx bx-plus me-1'></i> Tambah Baru
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <div class="table-responsive">
+                                        <table id="premiumTable" class="table table-hover mb-0">
+                                            <thead>
+                                                <tr>
+                                                    <th>Info Produk</th>
+                                                    <th>Kategori</th>
+                                                    <th>Stok</th>
+                                                    <th>Harga</th>
+                                                    <th class="text-end">Aksi</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <div class="d-flex align-items-center gap-3">
+                                                            <div class="icon-box"><i class='bx bx-shopping-bag'></i>
+                                                            </div>
+                                                            <div>
+                                                                <div class="fw-bold">Nike Air Max 2024</div>
+                                                                <small class="text-muted">SKU: NK-990</small>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>Fashion</td>
+                                                    <td>124 Unit</td>
+                                                    <td class="fw-semibold">Rp 2.450.000</td>
+                                                    <td class="text-end"><button class="btn btn-sm text-secondary"><i
+                                                                class='bx bx-dots-vertical-rounded fs-5'></i></button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="d-flex align-items-center gap-3">
+                                                            <div class="icon-box"><i class='bx bx-mobile-alt'></i></div>
+                                                            <div>
+                                                                <div class="fw-bold">iPhone 15 Pro Max</div>
+                                                                <small class="text-muted">SKU: IP-15PM</small>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>Gadget</td>
+                                                    <td>45 Unit</td>
+                                                    <td class="fw-semibold">Rp 24.999.000</td>
+                                                    <td class="text-end"><button class="btn btn-sm text-secondary"><i
+                                                                class='bx bx-dots-vertical-rounded fs-5'></i></button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="d-flex align-items-center gap-3">
+                                                            <div class="icon-box"><i class='bx bx-laptop'></i></div>
+                                                            <div>
+                                                                <div class="fw-bold">MacBook Pro M3</div>
+                                                                <small class="text-muted">SKU: MB-M3</small>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>Elektronik</td>
+                                                    <td>12 Unit</td>
+                                                    <td class="fw-semibold">Rp 32.000.000</td>
+                                                    <td class="text-end"><button class="btn btn-sm text-secondary"><i
+                                                                class='bx bx-dots-vertical-rounded fs-5'></i></button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                    <div class="table-footer">
+                                        <div id="infoPlacement"></div>
+                                        <div id="pagingPlacement"></div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const template = document.getElementById('product-card-template');
+        const container = document.getElementById('dom');
+
+        for (let i = 0; i < 10; i++) {
+            const clone = template.cloneNode(true);
+            clone.removeAttribute('id');
+            container.appendChild(clone);
+        }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.2/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.bootstrap5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.print.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            const table = $('#premiumTable').DataTable({
+                dom: 'Bfrtip',
+                buttons: [
+                    { extend: 'excel', className: 'd-none', title: 'Data Produk' },
+                    { extend: 'pdf', className: 'd-none', title: 'Data Produk' },
+                    { extend: 'print', className: 'd-none', title: 'Data Produk' }
+                ],
+                language: {
+                    info: "Menampilkan _START_ sampai _END_ dari _TOTAL_ data",
+                    paginate: {
+                        next: '<i class="bx bx-chevron-right"></i>',
+                        previous: '<i class="bx bx-chevron-left"></i>'
+                    }
+                },
+                pageLength: 10, // Default awal
+                drawCallback: function () {
+                    $('.dataTables_info').appendTo('#infoPlacement');
+                    $('.dataTables_paginate').appendTo('#pagingPlacement');
+                }
+            });
+
+            // 1. FUNGSI PER PAGE (Koneksi ke Select Kustom)
+            $('#customLengthInput').on('change', function () {
+                table.page.len($(this).val()).draw();
+            });
+
+            // 2. FUNGSI SEARCH
+            $('#customSearchInput').on('keyup', function () {
+                table.search(this.value).draw();
+            });
+
+            // 3. FUNGSI EXPORT
+            $('#btn-print').on('click', function () { table.button(2).trigger(); });
+            $('#btn-excel').on('click', function () { table.button(0).trigger(); });
+            $('#btn-pdf').on('click', function () { table.button(1).trigger(); });
+        });
+    </script>
+
+    <script src="https://cdn.ckeditor.com/ckeditor5/40.0.0/classic/ckeditor.js"></script>
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/dropvideo.js"></script>
+    <script src="../assets/js/script.js"></script>
+</body>
+
+</html>

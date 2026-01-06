@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Orange Dashboard - Sneat Style</title>
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23ff3e1d'/><text y='50%' x='50%' dominant-baseline='central' text-anchor='middle' font-size='70' fill='white'>A</text></svg>">
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/font/bootstrap-icons.css ">
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+
+    <aside id="sidebar">
+        <div class="brand-logo text-uppercase">
+            <img class="img-sidebard" src="../assets/img/ariatek.svg" alt="">
+        </div>
+
+        <div class="mt-2 overflow-auto" style="max-height: calc(100vh - 100px);">
+            <small class="text-muted fw-bold px-4 mb-2 d-block" style="font-size: 0.7rem;">MAIN MENU</small>
+
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="bi bi-grid-1x2-fill"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="bi bi-house-door"></i>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link menu-toggle active" aria-expanded="true" data-bs-toggle="collapse" href="#whyAriatek" role="button">
+                        <i class="bi bi-patch-question"></i>
+                        <span>Why Ariatek</span>
+                        <i class="bi bi-chevron-right ms-auto arrow-icon"></i>
+                    </a>
+                    <div class="collapse show" id="whyAriatek">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item"><a class="nav-link" href="#">Who is Ariatek</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Vision and Mission</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link menu-toggle" data-bs-toggle="collapse" href="#ourProduct" role="button">
+                        <i class="bi bi-box-seam"></i>
+                        <span>Our Product</span>
+                        <i class="bi bi-chevron-right ms-auto arrow-icon"></i>
+                    </a>
+                    <div class="collapse" id="ourProduct">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item"><a class="nav-link" href="#">Automation</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Robotics</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Internet Of Things</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Internet Of Things</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Artificial Intelligence</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Technology</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link menu-toggle" data-bs-toggle="collapse" href="#ourService" role="button">
+                        <i class="bi bi-building-gear"></i>
+                        <span>Our Service</span>
+                        <i class="bi bi-chevron-right ms-auto arrow-icon"></i>
+                    </a>
+                    <div class="collapse" id="ourService">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item"><a class="nav-link" href="#">LMS Ariatek</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Certification</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Collaboration</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Seminar</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link menu-toggle" data-bs-toggle="collapse" href="#contact" role="button">
+                        <i class="bi bi-envelope"></i>
+                        <span>Contact</span>
+                        <i class="bi bi-chevron-right ms-auto arrow-icon"></i>
+                    </a>
+                    <div class="collapse" id="contact">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item"><a class="nav-link" href="#">List Distribution</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Service Center</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Our Customer</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+
+            <small class="text-muted fw-bold px-4 mt-4 mb-2 d-block" style="font-size: 0.7rem;">REPORTS</small>
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a href="#" class="nav-link"><i class="bi bi-file-earmark-bar-graph"></i> Cost History</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link"><i class="bi bi-gear"></i> Settings</a>
+                </li>
+            </ul>
+        </div>
+    </aside>
+
+    <main id="content">
+        <nav class="navbar navbar-expand navbar-floating z-3">
+            <div class="container-fluid px-0">
+                <button class="btn btn-link d-lg-none me-2" id="sidebarToggle">
+                    <i class="bi bi-list fs-3 text-dark"></i>
+                </button>
+
+                <div class="search-box d-none d-md-flex">
+                    <i class="bi bi-search text-muted me-2"></i>
+                    <input type="text" name="nav_search" aria-label="Search Data"
+                        class="border-0 bg-transparent input-navbar" placeholder="Search data..."
+                        style="outline: none;">
+                </div>
+
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item me-3">
+                        <i class="bi bi-bell fs-5 text-muted"></i>
+                        </a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle p-0 d-flex align-items-center" href="#"
+                            data-bs-toggle="dropdown">
+                            <img src="https://ui-avatars.com/api/?name=Admin+User&background=ff3e1d&color=fff"
+                                class="rounded-circle" width="38">
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+                            <li><a class="dropdown-item" href="#">My Profile</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item text-danger" href="#">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="container">
+            <!-- Row RTS 1 -->
+            <div class="row">
+                <div class="card border-0 shadow-sm mb-3">
+                    <div class="card-header bg-transparent border-0 py-3" data-bs-toggle="collapse"
+                        href="#collapseBanner" role="button" aria-expanded="true" style="cursor: pointer;">
+
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center">
+                                <div class="bg-label-orange p-2 rounded me-3">
+                                    <i class="bi bi-1-square text-primary-orange"></i>
+                                </div>
+                                <h6 class="m-0 fw-bold">Content RTS 1 (Visi dan Misi)</h6>
+                            </div>
+                            <i class="bi bi-chevron-right arrow-icon transition-all text-muted"></i>
+                        </div>
+                    </div>
+
+                    <div class="collapse show" id="collapseBanner">
+                        <div class="card-body pt-0 border-top-0">
+                            <div class="p-3 bg-light rounded-3">
+                                <div class="row">
+                                    <label class="form-label fw-semibold text-muted small text-uppercase">Visi
+                                        Kami</label>
+                                    <div class="editor-container">
+                                        <div class="editor">
+                                            <p>Write AC checking details here...</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt-4">
+                                    <label class="form-label fw-semibold text-muted small text-uppercase">Misi
+                                        Kami</label>
+                                    <div class="editor-container">
+                                        <div class="editor">
+                                            <p>Write AC checking details here...</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const template = document.getElementById('product-card-template');
+        const container = document.getElementById('dom');
+        const container2 = document.getElementById('dom2');
+
+        for (let i = 0; i < 10; i++) {
+            const clone = template.cloneNode(true);
+            clone.removeAttribute('id');
+            container.appendChild(clone);
+            container2.appendChild(clone.cloneNode(true));
+        }
+    </script>
+
+    <script src="https://cdn.ckeditor.com/ckeditor5/40.0.0/classic/ckeditor.js"></script>
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/dropvideo.js"></script>
+    <script src="../assets/js/script.js"></script>
+</body>
+
+</html>
