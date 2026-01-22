@@ -40,7 +40,6 @@ document.addEventListener("DOMContentLoaded", () => {
             "highlight",
             "|",
             "removeFormat",
-            "-",
             "alignment",
             "|",
             "bulletedList",
@@ -60,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
             "selectAll",
             "sourceEditing",
           ],
-          shouldNotGroupWhenFull: true,
+          shouldNotGroupWhenFull: false,
         },
         placeholder: "Type or paste your content here!",
         fontFamily: {
