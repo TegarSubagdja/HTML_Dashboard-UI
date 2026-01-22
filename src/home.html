@@ -167,128 +167,135 @@
 
                     <div class="collapse" id="collapseBanner">
                         <div class="card-body pt-0 border-top-0">
-                            <div class="p-3 bg-light rounded-3">
-                                <div class="row">
-                                    <div class="col-6">
-                                        <div class="card border-0 shadow-sm mb-4 video-upload-widget">
-                                            <div class="card-body">
-                                                <div
-                                                    class="dropzone p-5 border border-2 border-dashed rounded-3 text-center transition-all position-relative js-dropzone">
-
-                                                    <input type="file" id="rts1_video_1" name="rts1_video_1"
-                                                        aria-label="Upload Video 1" class="js-file-input"
-                                                        accept="video/mp4,video/mov,video/avi" hidden>
-
-                                                    <div class="dz-message" style="pointer-events: none;">
-                                                        <i
-                                                            class="bi bi-cloud-arrow-up text-primary-orange display-5 mb-3"></i>
-                                                        <h6 class="fw-bold text-dark mb-2">Click or Drag File Here
-                                                        </h6>
-                                                        <p class="text-muted mb-0 small">Format MP4, MOV, or AVI
-                                                            (Max 50MB)</p>
-                                                    </div>
-                                                </div>
-
-                                                <div class="mt-4 js-video-preview" style="display: none;">
+                            <form action="http://localhost:3000/submit-form" method="POST">
+                                <div class="p-3 bg-light rounded-3">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="card border-0 shadow-sm mb-4 video-upload-widget">
+                                                <div class="card-body">
                                                     <div
-                                                        class="d-flex align-items-center bg-light p-3 rounded-3 border">
-                                                        <i
-                                                            class="bi bi-file-earmark-play-fill text-primary-orange fs-3 me-3"></i>
-                                                        <div class="flex-grow-1">
-                                                            <span
-                                                                class="fw-semibold text-dark d-block text-truncate js-file-name"
-                                                                style="max-width: 250px;"></span>
-                                                            <small class="text-muted js-file-size"></small>
+                                                        class="dropzone p-5 border border-2 border-dashed rounded-3 text-center transition-all position-relative js-dropzone">
+
+                                                        <input type="file" id="rts1_video_1" name="rts1_video_1"
+                                                            aria-label="Upload Video 1" class="js-file-input"
+                                                            accept="video/mp4,video/mov,video/avi" hidden>
+
+                                                        <div class="dz-message" style="pointer-events: none;">
+                                                            <i
+                                                                class="bi bi-cloud-arrow-up text-primary-orange display-5 mb-3"></i>
+                                                            <h6 class="fw-bold text-dark mb-2">Click or Drag File Here
+                                                            </h6>
+                                                            <p class="text-muted mb-0 small">Format MP4, MOV, or AVI
+                                                                (Max 50MB)</p>
                                                         </div>
-                                                        <button type="button"
-                                                            class="btn btn-sm btn-outline-danger shadow-none js-remove-file">
-                                                            <i class="bi bi-x-lg"></i>
+                                                    </div>
+
+                                                    <div class="mt-4 js-video-preview" style="display: none;">
+                                                        <div
+                                                            class="d-flex align-items-center bg-light p-3 rounded-3 border">
+                                                            <i
+                                                                class="bi bi-file-earmark-play-fill text-primary-orange fs-3 me-3"></i>
+                                                            <div class="flex-grow-1">
+                                                                <span
+                                                                    class="fw-semibold text-dark d-block text-truncate js-file-name"
+                                                                    style="max-width: 250px;"></span>
+                                                                <small class="text-muted js-file-size"></small>
+                                                            </div>
+                                                            <button type="button"
+                                                                class="btn btn-sm btn-outline-danger shadow-none js-remove-file">
+                                                                <i class="bi bi-x-lg"></i>
+                                                            </button>
+                                                        </div>
+                                                        <video
+                                                            class="w-100 mt-3 rounded shadow-sm js-video-player video-player-style"
+                                                            controls
+                                                            style="max-height: 250px; display: none; object-fit: cover;"></video>
+
+                                                        <button
+                                                            class="btn btn-primary-orange w-100 mt-3 py-2 shadow-none js-upload-btn"
+                                                            disabled>
+                                                            <i class="bi bi-upload me-2"></i>Start Upload
                                                         </button>
                                                     </div>
-                                                    <video
-                                                        class="w-100 mt-3 rounded shadow-sm js-video-player video-player-style"
-                                                        controls
-                                                        style="max-height: 250px; display: none; object-fit: cover;"></video>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="card border-0 shadow-sm mb-4 video-upload-widget">
+                                                <div class="card-body">
+                                                    <div
+                                                        class="dropzone p-5 border border-2 border-dashed rounded-3 text-center transition-all position-relative js-dropzone">
 
-                                                    <button
-                                                        class="btn btn-primary-orange w-100 mt-3 py-2 shadow-none js-upload-btn"
-                                                        disabled>
-                                                        <i class="bi bi-upload me-2"></i>Start Upload
-                                                    </button>
+                                                        <input type="file" id="rts1_video_2" name="rts1_video_2"
+                                                            aria-label="Upload Video 2" class="js-file-input"
+                                                            accept="video/mp4,video/mov,video/avi" hidden>
+
+                                                        <div class="dz-message" style="pointer-events: none;">
+                                                            <i
+                                                                class="bi bi-cloud-arrow-up text-primary-orange display-5 mb-3"></i>
+                                                            <h6 class="fw-bold text-dark mb-2">Click or Drag File Here
+                                                            </h6>
+                                                            <p class="text-muted mb-0 small">Format MP4, MOV, or AVI
+                                                                (Max 50MB)</p>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="mt-4 js-video-preview" style="display: none;">
+                                                        <div
+                                                            class="d-flex align-items-center bg-light p-3 rounded-3 border">
+                                                            <i
+                                                                class="bi bi-file-earmark-play-fill text-primary-orange fs-3 me-3"></i>
+                                                            <div class="flex-grow-1">
+                                                                <span
+                                                                    class="fw-semibold text-dark d-block text-truncate js-file-name"
+                                                                    style="max-width: 250px;"></span>
+                                                                <small class="text-muted js-file-size"></small>
+                                                            </div>
+                                                            <button type="button"
+                                                                class="btn btn-sm btn-outline-danger shadow-none js-remove-file">
+                                                                <i class="bi bi-x-lg"></i>
+                                                            </button>
+                                                        </div>
+                                                        <video
+                                                            class="w-100 mt-3 rounded shadow-sm js-video-player video-player-style"
+                                                            controls
+                                                            style="max-height: 250px; display: none; object-fit: cover;"></video>
+
+                                                        <button
+                                                            class="btn btn-primary-orange w-100 mt-3 py-2 shadow-none js-upload-btn"
+                                                            disabled>
+                                                            <i class="bi bi-upload me-2"></i>Start Upload
+                                                        </button>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-6">
-                                        <div class="card border-0 shadow-sm mb-4 video-upload-widget">
-                                            <div class="card-body">
-                                                <div
-                                                    class="dropzone p-5 border border-2 border-dashed rounded-3 text-center transition-all position-relative js-dropzone">
-
-                                                    <input type="file" id="rts1_video_2" name="rts1_video_2"
-                                                        aria-label="Upload Video 2" class="js-file-input"
-                                                        accept="video/mp4,video/mov,video/avi" hidden>
-
-                                                    <div class="dz-message" style="pointer-events: none;">
-                                                        <i
-                                                            class="bi bi-cloud-arrow-up text-primary-orange display-5 mb-3"></i>
-                                                        <h6 class="fw-bold text-dark mb-2">Click or Drag File Here
-                                                        </h6>
-                                                        <p class="text-muted mb-0 small">Format MP4, MOV, or AVI
-                                                            (Max 50MB)</p>
-                                                    </div>
-                                                </div>
-
-                                                <div class="mt-4 js-video-preview" style="display: none;">
-                                                    <div
-                                                        class="d-flex align-items-center bg-light p-3 rounded-3 border">
-                                                        <i
-                                                            class="bi bi-file-earmark-play-fill text-primary-orange fs-3 me-3"></i>
-                                                        <div class="flex-grow-1">
-                                                            <span
-                                                                class="fw-semibold text-dark d-block text-truncate js-file-name"
-                                                                style="max-width: 250px;"></span>
-                                                            <small class="text-muted js-file-size"></small>
-                                                        </div>
-                                                        <button type="button"
-                                                            class="btn btn-sm btn-outline-danger shadow-none js-remove-file">
-                                                            <i class="bi bi-x-lg"></i>
-                                                        </button>
-                                                    </div>
-                                                    <video
-                                                        class="w-100 mt-3 rounded shadow-sm js-video-player video-player-style"
-                                                        controls
-                                                        style="max-height: 250px; display: none; object-fit: cover;"></video>
-
-                                                    <button
-                                                        class="btn btn-primary-orange w-100 mt-3 py-2 shadow-none js-upload-btn"
-                                                        disabled>
-                                                        <i class="bi bi-upload me-2"></i>Start Upload
-                                                    </button>
-                                                </div>
+                                    <div class="row">
+                                        <div class="mt-3">
+                                            <div class="editor-container">
+                                                <textarea class="editor" name="rts1_content_1">
+                                                <p>ARIATEK For a Better Future</p>
+                                            </textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="mt-3">
+                                            <div class="editor-container">
+                                                <textarea class="editor" name="rts1_content_2">
+                                                <p>Engineering, IT & Training</p>
+                                            </textarea>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="mt-3">
-                                        <div class="editor-container">
-                                            <textarea class="editor" name="rts1_content_1">
-                                                <p>Write AC checking details here...</p>
-                                            </textarea>
-                                        </div>
-                                    </div>
+                                <div class="mt-3 text-end">
+                                    <button type="submit" class="btn btn-primary-orange text-white">
+                                        <i class="bi bi-save me-2"></i>Save RTS 1
+                                    </button>
                                 </div>
-                                <div class="row">
-                                    <div class="mt-3">
-                                        <div class="editor-container">
-                                            <textarea class="editor" name="rts1_content_2">
-                                                <p>Write AC checking details here...</p>
-                                            </textarea>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -319,7 +326,7 @@
                                             class="form-label fw-semibold text-muted small text-uppercase">Title</label>
                                         <div class="editor-container">
                                             <textarea class="editor" name="rts2_title_content">
-                                                <p>Write AC checking details here...</p>
+                                                <p>Keunggulan ARIATEK</p>
                                             </textarea>
                                         </div>
                                     </div>
@@ -414,7 +421,7 @@
                                                     class="bi bi-search text-muted"></i></span>
                                             <input type="text" id="rts2_ac_title" name="rts2_ac_title"
                                                 class="form-control border-0 shadow-none ps-0"
-                                                placeholder="Type AC name...">
+                                                placeholder="Type title here...">
                                         </div>
                                     </div>
                                     <div class="col-12">
@@ -430,7 +437,7 @@
                                                 class="form-control border-0 shadow-none py-3 catatan-teknis js-char-limit-input"
                                                 rows="4"
                                                 placeholder="Write checking details or customer complaints here..."
-                                                style="resize: none;"></textarea>
+                                                style="resize: none;">Kami menyediakan solusi teknologi terintegrasi untuk masa depan yang lebih baik.</textarea>
                                         </div>
 
                                         <div class="form-text text-end mt-2">
@@ -475,7 +482,7 @@
                                             <span class="input-group-text border-0 bg-transparent"><i
                                                     class="bi bi-type-h1 text-muted"></i></span>
                                             <input type="text" id="rts3_main_title" name="rts3_main_title"
-                                                class="form-control border-0 shadow-none" placeholder="Type AC name...">
+                                                class="form-control border-0 shadow-none" placeholder="Company Profile">
                                         </div>
                                     </div>
                                     <div class="col-12">
@@ -489,8 +496,7 @@
                                             </span>
                                             <textarea id="rts3_main_desc" name="rts3_main_desc"
                                                 class="form-control border-0 shadow-none py-3 catatan-teknis js-char-limit-input"
-                                                rows="4"
-                                                placeholder="Write checking details or customer complaints here..."
+                                                rows="4" placeholder="Write video description here..."
                                                 style="resize: none;"></textarea>
                                         </div>
 
@@ -511,7 +517,8 @@
                                             <span class="input-group-text border-0 bg-transparent"><i
                                                     class="bi bi-type-h1 text-muted"></i></span>
                                             <input type="text" id="rts3_sub1_title" name="rts3_sub1_title"
-                                                class="form-control border-0 shadow-none" placeholder="Type AC name...">
+                                                class="form-control border-0 shadow-none"
+                                                placeholder="Training Activity">
                                         </div>
                                         <label class="form-label fw-semibold text-muted small mt-3 text-uppercase"
                                             for="rts3_sub1_desc">Description</label>
@@ -523,8 +530,7 @@
                                             </span>
                                             <textarea id="rts3_sub1_desc" name="rts3_sub1_desc"
                                                 class="form-control border-0 shadow-none py-3 catatan-teknis js-char-limit-input"
-                                                rows="4"
-                                                placeholder="Write checking details or customer complaints here..."
+                                                rows="4" placeholder="Write video description here..."
                                                 style="resize: none;"></textarea>
                                         </div>
 
@@ -543,7 +549,7 @@
                                             <span class="input-group-text border-0 bg-transparent"><i
                                                     class="bi bi-type-h1 text-muted"></i></span>
                                             <input type="text" id="rts3_sub2_title" name="rts3_sub2_title"
-                                                class="form-control border-0 shadow-none" placeholder="Type AC name...">
+                                                class="form-control border-0 shadow-none" placeholder="Product Demo">
                                         </div>
                                         <label class="form-label fw-semibold text-muted small mt-3 text-uppercase"
                                             for="rts3_sub2_desc">Description</label>
@@ -555,8 +561,7 @@
                                             </span>
                                             <textarea id="rts3_sub2_desc" name="rts3_sub2_desc"
                                                 class="form-control border-0 shadow-none py-3 catatan-teknis js-char-limit-input"
-                                                rows="4"
-                                                placeholder="Write checking details or customer complaints here..."
+                                                rows="4" placeholder="Write video description here..."
                                                 style="resize: none;"></textarea>
                                         </div>
 
@@ -575,7 +580,7 @@
                                             <span class="input-group-text border-0 bg-transparent"><i
                                                     class="bi bi-type-h1 text-muted"></i></span>
                                             <input type="text" id="rts3_sub3_title" name="rts3_sub3_title"
-                                                class="form-control border-0 shadow-none" placeholder="Type AC name...">
+                                                class="form-control border-0 shadow-none" placeholder="Testimonials">
                                         </div>
                                         <label class="form-label fw-semibold text-muted small mt-3 text-uppercase"
                                             for="rts3_sub3_desc">Description</label>
@@ -587,8 +592,7 @@
                                             </span>
                                             <textarea id="rts3_sub3_desc" name="rts3_sub3_desc"
                                                 class="form-control border-0 shadow-none py-3 catatan-teknis js-char-limit-input"
-                                                rows="4"
-                                                placeholder="Write checking details or customer complaints here..."
+                                                rows="4" placeholder="Write video description here..."
                                                 style="resize: none;"></textarea>
                                         </div>
 
@@ -607,7 +611,7 @@
                                             <span class="input-group-text border-0 bg-transparent"><i
                                                     class="bi bi-type-h1 text-muted"></i></span>
                                             <input type="text" id="rts3_sub4_title" name="rts3_sub4_title"
-                                                class="form-control border-0 shadow-none" placeholder="Type AC name...">
+                                                class="form-control border-0 shadow-none" placeholder="Facility Tour">
                                         </div>
                                         <label class="form-label fw-semibold text-muted small mt-3 text-uppercase"
                                             for="rts3_sub4_desc">Description</label>
@@ -619,8 +623,7 @@
                                             </span>
                                             <textarea id="rts3_sub4_desc" name="rts3_sub4_desc"
                                                 class="form-control border-0 shadow-none py-3 catatan-teknis js-char-limit-input"
-                                                rows="4"
-                                                placeholder="Write checking details or customer complaints here..."
+                                                rows="4" placeholder="Write video description here..."
                                                 style="resize: none;"></textarea>
                                         </div>
 
@@ -639,7 +642,7 @@
                                             <span class="input-group-text border-0 bg-transparent"><i
                                                     class="bi bi-type-h1 text-muted"></i></span>
                                             <input type="text" id="rts3_sub5_title" name="rts3_sub5_title"
-                                                class="form-control border-0 shadow-none" placeholder="Type AC name...">
+                                                class="form-control border-0 shadow-none" placeholder="Workshop Event">
                                         </div>
                                         <label class="form-label fw-semibold text-muted small mt-3 text-uppercase"
                                             for="rts3_sub5_desc">Description</label>
@@ -651,8 +654,7 @@
                                             </span>
                                             <textarea id="rts3_sub5_desc" name="rts3_sub5_desc"
                                                 class="form-control border-0 shadow-none py-3 catatan-teknis js-char-limit-input"
-                                                rows="4"
-                                                placeholder="Write checking details or customer complaints here..."
+                                                rows="4" placeholder="Write video description here..."
                                                 style="resize: none;"></textarea>
                                         </div>
 
@@ -699,7 +701,7 @@
                                                     class="bi bi-type-h1 text-muted"></i></span>
                                             <input type="text" id="rts4_item1_title" name="rts4_item1_title"
                                                 class="form-control border-0 shadow-none"
-                                                placeholder="Masukan judul...">
+                                                placeholder="Siswa Tersertifikasi">
                                         </div>
                                         <label class="form-label fw-semibold text-muted small text-uppercase mt-3"
                                             for="rts4_item1_percent">Percentage 1</label>
@@ -707,8 +709,7 @@
                                             <span class="input-group-text border-0 bg-transparent"><i
                                                     class="bi bi-type-h2 text-muted"></i></span>
                                             <input type="text" id="rts4_item1_percent" name="rts4_item1_percent"
-                                                class="form-control border-0 shadow-none"
-                                                placeholder="Masukan nilai...">
+                                                class="form-control border-0 shadow-none" placeholder="95%">
                                         </div>
                                     </div>
                                     <div class="col-3">
@@ -718,7 +719,7 @@
                                             <span class="input-group-text border-0 bg-transparent"><i
                                                     class="bi bi-type-h1 text-muted"></i></span>
                                             <input type="text" id="rts4_item2_title" name="rts4_item2_title"
-                                                class="form-control border-0 shadow-none" placeholder="Enter title...">
+                                                class="form-control border-0 shadow-none" placeholder="Mitra Industri">
                                         </div>
                                         <label class="form-label fw-semibold text-muted small text-uppercase mt-3"
                                             for="rts4_item2_percent">Percentage 2</label>
@@ -726,7 +727,7 @@
                                             <span class="input-group-text border-0 bg-transparent"><i
                                                     class="bi bi-type-h2 text-muted"></i></span>
                                             <input type="text" id="rts4_item2_percent" name="rts4_item2_percent"
-                                                class="form-control border-0 shadow-none" placeholder="Enter value...">
+                                                class="form-control border-0 shadow-none" placeholder="50+">
                                         </div>
                                     </div>
                                     <div class="col-3">
@@ -736,7 +737,7 @@
                                             <span class="input-group-text border-0 bg-transparent"><i
                                                     class="bi bi-type-h1 text-muted"></i></span>
                                             <input type="text" id="rts4_item3_title" name="rts4_item3_title"
-                                                class="form-control border-0 shadow-none" placeholder="Enter title...">
+                                                class="form-control border-0 shadow-none" placeholder="Proyek Selesai">
                                         </div>
                                         <label class="form-label fw-semibold text-muted small text-uppercase mt-3"
                                             for="rts4_item3_percent">Percentage 3</label>
@@ -744,7 +745,7 @@
                                             <span class="input-group-text border-0 bg-transparent"><i
                                                     class="bi bi-type-h2 text-muted"></i></span>
                                             <input type="text" id="rts4_item3_percent" name="rts4_item3_percent"
-                                                class="form-control border-0 shadow-none" placeholder="Enter value...">
+                                                class="form-control border-0 shadow-none" placeholder="100+">
                                         </div>
                                     </div>
                                     <div class="col-3">
@@ -754,7 +755,7 @@
                                             <span class="input-group-text border-0 bg-transparent"><i
                                                     class="bi bi-type-h1 text-muted"></i></span>
                                             <input type="text" id="rts4_item4_title" name="rts4_item4_title"
-                                                class="form-control border-0 shadow-none" placeholder="Enter title...">
+                                                class="form-control border-0 shadow-none" placeholder="Instruktur Ahli">
                                         </div>
                                         <label class="form-label fw-semibold text-muted small text-uppercase mt-3"
                                             for="rts4_item4_percent">Percentage 4</label>
@@ -762,7 +763,7 @@
                                             <span class="input-group-text border-0 bg-transparent"><i
                                                     class="bi bi-type-h2 text-muted"></i></span>
                                             <input type="text" id="rts4_item4_percent" name="rts4_item4_percent"
-                                                class="form-control border-0 shadow-none" placeholder="Enter value...">
+                                                class="form-control border-0 shadow-none" placeholder="20+">
                                         </div>
                                     </div>
                                 </div>
@@ -794,7 +795,7 @@
                                         <div class="card card-product border-0 shadow-sm h-100">
                                             <div class="product-img-wrapper position-relative">
                                                 <div class="product-badge">
-                                                    <span class="badge bg-label-orange">Hemat Energi</span>
+                                                    <span class="badge bg-label-orange">Best Seller</span>
                                                 </div>
 
                                                 <div class="position-absolute top-0 end-0 m-2" style="z-index: 2;">
@@ -824,18 +825,18 @@
                                                 </div>
 
                                                 <div class="img-container">
-                                                    <img src="https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?auto=format&fit=crop&q=80&w=400"
-                                                        alt="AC Unit" class="w-100">
+                                                    <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=400"
+                                                        alt="Training Module" class="w-100">
                                                 </div>
                                             </div>
 
                                             <div class="card-body p-3">
                                                 <div class="d-flex justify-content-between mb-1">
-                                                    <small class="text-muted">Inverter</small>
+                                                    <small class="text-muted">Module</small>
                                                     <small class="text-warning"><i class="bi bi-star-fill"></i>
                                                         4.8</small>
                                                 </div>
-                                                <h6 class="fw-bold mb-2 text-dark">Daikin Inverter 1/2 PK</h6>
+                                                <h6 class="fw-bold mb-2 text-dark">Training Module Basic</h6>
                                                 <div class="product-price mb-3">
                                                     <span class="text-primary-orange fw-bold fs-5">Rp4.250.000</span>
                                                     <small
@@ -878,7 +879,7 @@
                                         <div class="card card-product border-0 shadow-sm h-100">
                                             <div class="product-img-wrapper position-relative">
                                                 <div class="product-badge">
-                                                    <span class="badge bg-label-orange">Energy Saving</span>
+                                                    <span class="badge bg-label-orange">New Release</span>
                                                 </div>
 
                                                 <div class="position-absolute top-0 end-0 m-2" style="z-index: 2;">
@@ -1070,7 +1071,7 @@
         }
     </script>
 
-    <script src="https://cdn.ckeditor.com/ckeditor5/40.0.0/classic/ckeditor.js"></script>
+    <script src="https://cdn.ckeditor.com/ckeditor5/40.0.0/super-build/ckeditor.js"></script>
     <script src="../assets/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/js/dropvideo.js"></script>
     <script src="../assets/js/script.js"></script>

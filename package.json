@@ -21,6 +21,8 @@
   "dependencies": {
     "bootstrap": "^5.3.8",
     "bootstrap-icons": "^1.13.1",
+    "express": "^5.2.1",
+    "multer": "^2.0.2",
     "puppeteer": "^24.34.0"
   }
 }
