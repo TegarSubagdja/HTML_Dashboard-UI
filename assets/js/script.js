@@ -4,7 +4,6 @@
  */
 
 document.addEventListener("DOMContentLoaded", () => {
-  // --- 1. Logika Sidebar ---
   const initSidebar = () => {
     const toggleBtn = document.getElementById("sidebarToggle");
     const sidebar = document.getElementById("sidebar");
@@ -16,29 +15,33 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
-  // --- 2. Logika CKEditor ---
   const initEditor = () => {
     document.querySelectorAll(".editor").forEach((el) => {
       CKEDITOR.ClassicEditor.create(el, {
-        // https://ckeditor.com/docs/ckeditor5/latest/features/toolbar/toolbar.html#extended-toolbar-configuration-format
         toolbar: {
           items: [
-            "exportPDF",
-            "exportWord",
-            "|",
-            "findAndReplace",
-            "selectAll",
+            "undo",
+            "redo",
             "|",
             "heading",
             "|",
+            "fontFamily",
+            "fontSize",
+            "|",
             "bold",
             "italic",
-            "strikethrough",
             "underline",
-            "code",
+            "strikethrough",
             "subscript",
             "superscript",
+            "|",
+            "fontColor",
+            "fontBackgroundColor",
+            "highlight",
+            "|",
             "removeFormat",
+            "-",
+            "alignment",
             "|",
             "bulletedList",
             "numberedList",
@@ -47,49 +50,19 @@ document.addEventListener("DOMContentLoaded", () => {
             "outdent",
             "indent",
             "|",
-            "undo",
-            "redo",
-            "-",
-            "fontSize",
-            "fontFamily",
-            "fontColor",
-            "fontBackgroundColor",
-            "highlight",
-            "|",
-            "alignment",
-            "|",
             "link",
-            "insertImage",
             "blockQuote",
             "insertTable",
-            "mediaEmbed",
-            "codeBlock",
-            "htmlEmbed",
-            "|",
-            "specialCharacters",
             "horizontalLine",
-            "pageBreak",
+            "specialCharacters",
             "|",
-            "textPartLanguage",
-            "|",
+            "findAndReplace",
+            "selectAll",
             "sourceEditing",
           ],
           shouldNotGroupWhenFull: true,
         },
-        // https://ckeditor.com/docs/ckeditor5/latest/features/general-html-support.html
-        //htmlSupport: {
-        //    allow: [
-        //        {
-        //            name: /.*/,
-        //            attributes: true,
-        //            classes: true,
-        //            styles: true
-        //        }
-        //    ]
-        //},
-        // https://ckeditor.com/docs/ckeditor5/latest/features/editor-placeholder.html#using-the-editor-configuration
         placeholder: "Type or paste your content here!",
-        // https://ckeditor.com/docs/ckeditor5/latest/features/font.html#configuring-the-font-family-feature
         fontFamily: {
           options: [
             "default",
@@ -104,16 +77,11 @@ document.addEventListener("DOMContentLoaded", () => {
           ],
           supportAllValues: true,
         },
-        // https://ckeditor.com/docs/ckeditor5/latest/features/font.html#configuring-the-font-size-feature
         fontSize: {
           options: [10, 12, 14, "default", 18, 20, 22],
           supportAllValues: true,
         },
-        // Be careful with the plugins list.
-        // https://ckeditor.com/docs/ckeditor5/latest/features/plugins.html
-        // Safely load plugins
         plugins: [
-          // Essentials
           "Essentials",
           "Autoformat",
           "Bold",
@@ -123,31 +91,16 @@ document.addEventListener("DOMContentLoaded", () => {
           "Link",
           "List",
           "Paragraph",
-          "Image",
-          "ImageCaption",
-          "ImageStyle",
-          "ImageToolbar",
-          "ImageUpload",
           "Indent",
           "Table",
           "TableToolbar",
-          "MediaEmbed",
 
-          // Extra plugins
           "Alignment",
-          "AutoImage",
-          "ImageInsert",
-          "ImageResize",
-          "LinkImage",
           "Autosave",
-          "Code",
-          "CodeBlock",
           "FindAndReplace",
           "Font",
           "Highlight",
           "HorizontalLine",
-          "HtmlEmbed",
-          "PageBreak",
           "PasteFromOffice",
           "RemoveFormat",
           "SourceEditing",
@@ -214,40 +167,9 @@ document.addEventListener("DOMContentLoaded", () => {
             },
           ],
         },
-        // https://ckeditor.com/docs/ckeditor5/latest/features/images/image-upload/image-upload.html
-        image: {
-          resizeOptions: [
-            {
-              name: "resizeImage:original",
-              value: null,
-              icon: "original",
-            },
-            {
-              name: "resizeImage:50",
-              value: "50",
-              icon: "medium",
-            },
-            {
-              name: "resizeImage:75",
-              value: "75",
-              icon: "large",
-            },
-          ],
-          toolbar: [
-            "imageTextAlternative",
-            "toggleImageCaption",
-            "|",
-            "imageStyle:inline",
-            "imageStyle:wrapText",
-            "imageStyle:breakText",
-            "|",
-            "resizeImage",
-          ],
-        },
-        // https://ckeditor.com/docs/ckeditor5/latest/features/link.html#custom-link-attributes-decorators
+
         link: {
           addTargetToExternalLinks: true,
-          defaultProtocol: "https://",
           decorators: {
             toggleDownloadable: {
               mode: "manual",
@@ -258,7 +180,6 @@ document.addEventListener("DOMContentLoaded", () => {
             },
           },
         },
-        // https://ckeditor.com/docs/ckeditor5/latest/features/table.html
         table: {
           contentToolbar: [
             "tableColumn",
@@ -268,30 +189,10 @@ document.addEventListener("DOMContentLoaded", () => {
             "tableProperties",
           ],
         },
-        // https://ckeditor.com/docs/ckeditor5/latest/features/general-html-support.html
-        // htmlSupport: {
-        //     allow: [
-        //         {
-        //             name: /.*/,
-        //             attributes: true,
-        //             classes: true,
-        //             styles: true
-        //         }
-        //     ]
-        // },
         removePlugins: [
-          // These two are commercial, but you can try them
-          // 'ExportPdf',
-          // 'ExportWord',
           "CKBox",
           "CKFinder",
           "EasyImage",
-          // This sample uses the Base64UploadAdapter to handle image uploads as it requires no configuration.
-          // https://ckeditor.com/docs/ckeditor5/latest/features/images/image-upload/base64-upload-adapter.html
-          // Storing images as Base64 is usually a very bad idea.
-          // Replace it on production website with other solutions:
-          // https://ckeditor.com/docs/ckeditor5/latest/features/images/image-upload/image-upload.html
-          // 'Base64UploadAdapter',
           "RealTimeCollaborativeComments",
           "RealTimeCollaborativeTrackChanges",
           "RealTimeCollaborativeRevisionHistory",
@@ -302,8 +203,6 @@ document.addEventListener("DOMContentLoaded", () => {
           "RevisionHistory",
           "Pagination",
           "WProofreader",
-          // Careful, with the Mathtype plugin CKEditor will not load when loading this sample
-          // from a local file system (file://) - load this site via HTTP server if you enable MathType
           "MathType",
         ],
       })
